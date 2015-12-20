@@ -18,7 +18,7 @@ import com.dev.vivec.bookastudent.R;
  * Created by Teperics Márton on 2015.11.08..
  */
 public class SplashScreen extends Activity{
-    private static int timer = 2000;
+    private static int timer = 1500;
     Animation animFadein;
     ImageView logo;
     RelativeLayout rl;
@@ -65,5 +65,9 @@ public class SplashScreen extends Activity{
 
     public void onDestroy(){
         super.onDestroy();
+    }
+
+    public void onPause(){
+        super.onPause();
     }
 }

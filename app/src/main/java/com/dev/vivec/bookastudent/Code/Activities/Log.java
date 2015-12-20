@@ -70,4 +70,10 @@ public class Log extends AppCompatActivity {
 
             return super.onOptionsItemSelected(item);
         }
+
+    public void onBackPressed(){
+        super.onBackPressed();
+        overridePendingTransition(R.anim.move_destroy_left, R.anim.move_destroy_right);
+    }
+
 }

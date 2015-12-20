@@ -174,4 +174,9 @@ public class NewMain extends AppCompatActivity {
 
             return super.onOptionsItemSelected(item);
         }
+
+        public void onPause() {
+            super.onPause();
+            overridePendingTransition(R.anim.move_destroy_left, R.anim.move_destroy_right);
+        }
 }
