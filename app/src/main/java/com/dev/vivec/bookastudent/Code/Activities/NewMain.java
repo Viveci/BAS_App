@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.dev.vivec.bookastudent.Code.Fragments.Contact;
 import com.dev.vivec.bookastudent.Code.Fragments.FindJobs;
 import com.dev.vivec.bookastudent.Code.Fragments.Home;
+import com.dev.vivec.bookastudent.Code.Fragments.MyJobs;
 import com.dev.vivec.bookastudent.R;
 
 
@@ -84,12 +85,12 @@ public class NewMain extends AppCompatActivity {
 
                         case R.id.MyJobs:
                             Toast.makeText(getApplicationContext(), "My jobs selected", Toast.LENGTH_SHORT).show();
-                            fragmentTransaction.replace(R.id.frame, new FindJobs());
+                            fragmentTransaction.replace(R.id.frame, new MyJobs());
                             fragmentTransaction.commit();
                             return true;
                         case R.id.FindJobs:
                             Toast.makeText(getApplicationContext(), "Find a job selected", Toast.LENGTH_SHORT).show();
-                            fragmentTransaction.replace(R.id.frame, new Contact());
+                            fragmentTransaction.replace(R.id.frame, new FindJobs());
                             fragmentTransaction.commit();
                             return true;
                         case R.id.Rating:

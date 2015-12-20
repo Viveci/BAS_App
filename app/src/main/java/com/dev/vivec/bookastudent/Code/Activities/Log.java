@@ -64,6 +64,7 @@ public class Log extends AppCompatActivity {
                         finish();
                     } else {
                         NavUtils.navigateUpTo(this, upIntent);
+                        overridePendingTransition(R.anim.move_destroy_left, R.anim.move_destroy_right);
                     }
                     return true;
             }

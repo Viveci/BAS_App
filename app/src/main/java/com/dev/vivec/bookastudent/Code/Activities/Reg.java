@@ -2,6 +2,8 @@ package com.dev.vivec.bookastudent.Code.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,6 +46,22 @@ public class Reg extends AppCompatActivity {
 
         if (id == R.id.action_settings) {
             return true;
+        }
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent upIntent = new Intent(this, LogReg.class);
+                if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
+                    TaskStackBuilder
+                            .from(this)
+                            .addNextIntent(new Intent(this, LogReg.class))
+                            .addNextIntent(upIntent).startActivities();
+                    finish();
+                } else {
+                    NavUtils.navigateUpTo(this, upIntent);
+                    overridePendingTransition(R.anim.move_destroy_left, R.anim.move_destroy_right);
+                }
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

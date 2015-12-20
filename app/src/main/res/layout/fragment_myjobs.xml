@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mycompany.myapp.MyActivity" >
+
+    <!-- This is the Toolbar with the tabs underneath -->
+    <LinearLayout android:id="@+id/detail_headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.dev.vivec.bookastudent.Code.Activities.SlidingTabLayout
+            android:id="@+id/tabs"
+            android:background="@color/bcg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <!-- This is the ViewPager (which I had used before) and 
+         it would be responsible for the swiping to change layouts -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_headerBar"/>
+
+
+</RelativeLayout>
