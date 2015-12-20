@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1"
+        android:background="#EEEEEE"
+        android:id="@+id/findajob_parent"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:id="@+id/findajob_box"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#AAAAAA"
+                android:id="@+id/findajob_div"
+                android:layout_below="@+id/findajob_input_search"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"></FrameLayout>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:id="@+id/findajob_input_search"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/findajob_div"
+                android:layout_toStartOf="@+id/findajob_button_find"
+                android:background="#DDDDDD"
+                android:singleLine="true"
+                android:capitalize="sentences"
+                android:paddingLeft="5dp" />
+
+            <ImageButton
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/findajob_button_find"
+                android:layout_alignTop="@+id/findajob_input_search"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_search_black_24dp"
+                android:background="@drawable/search_button_shape" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/findajob_list"
+            android:layout_below="@+id/findajob_box"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:clickable="true" />
+    </RelativeLayout>
+</ScrollView>

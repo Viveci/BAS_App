@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="1"
+        android:background="#EEEEEE"
+        android:id="@+id/profile_screen">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="#FFFFFF"
+            android:id="@+id/profile_generalbox">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageView"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/mycircleface" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Full name"
+                android:id="@+id/profile_name"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Márton Teperics"
+                android:id="@+id/profile_userName"
+                android:layout_below="@+id/profile_name"
+                android:layout_alignStart="@+id/profile_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textColor="#333333" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/profile_div1"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/profile_userName"
+                android:layout_alignStart="@+id/profile_userName"></FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="CPR number"
+                android:id="@+id/profile_cpr"
+                android:layout_below="@+id/profile_userName"
+                android:layout_alignStart="@+id/profile_userName"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="122345-5678"
+                android:id="@+id/profile_user_Cpr"
+                android:layout_below="@+id/profile_cpr"
+                android:layout_alignStart="@+id/profile_cpr"
+                android:layout_alignEnd="@+id/profile_div1"
+                android:textColor="#333333" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/profile_user_Cpr"
+                android:layout_alignStart="@+id/profile_user_Cpr"
+                android:layout_marginBottom="10dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_generalbox"
+            android:layout_alignStart="@+id/profile_generalbox"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/profile_adressbox"
+            android:background="#FFFFFF"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Address"
+                android:id="@+id/profile_Adress_box_title"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hestedamsgade 12. 2. sal"
+                android:id="@+id/profile_user_address"
+                android:layout_below="@+id/profile_address_label"
+                android:layout_alignStart="@+id/profile_address_label"
+                android:layout_alignParentEnd="true"
+                android:textColor="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Address"
+                android:id="@+id/profile_address_label"
+                android:layout_below="@+id/profile_Adress_box_title"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout2"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/profile_user_address"
+                android:layout_alignStart="@+id/profile_user_address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="ZIP code"
+                android:id="@+id/profile_address_zip"
+                android:layout_below="@+id/profile_user_address"
+                android:layout_alignStart="@+id/profile_user_address"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="8700"
+                android:id="@+id/profile_user_zipcode"
+                android:layout_below="@+id/profile_address_zip"
+                android:layout_alignStart="@+id/profile_address_zip"
+                android:textColor="#333333" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout3"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/profile_user_zipcode"
+                android:layout_alignStart="@+id/profile_user_zipcode" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="City"
+                android:id="@+id/profile_adress_city_text"
+                android:layout_below="@+id/frameLayout3"
+                android:layout_alignStart="@+id/frameLayout3"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Horsens"
+                android:id="@+id/profile_user_Address"
+                android:layout_below="@+id/profile_adress_city_text"
+                android:layout_alignStart="@+id/profile_adress_city_text"
+                android:textColor="#333333" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout4"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/profile_user_Address"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_adressbox"
+            android:layout_alignStart="@+id/profile_adressbox"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:id="@+id/profile_AboutMeBox">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="About me"
+                android:id="@+id/profile_AboutMeBox_box"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="About"
+                android:id="@+id/profile_About_text"
+                android:textColor="#555555"
+                android:layout_below="@+id/profile_AboutMeBox_box"
+                android:layout_alignStart="@+id/profile_AboutMeBox_box"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Lorem ipsum dolor sit amet, ius id iudicabit liberavisse, has at laboramus intellegat. Et mel vivendo accusata philosophia, primis dicunt ea nec. Nulla mnesarchum qui ad. Velit assueverit inciderint vix ad, pri invenire delicata salutandi ne. Et affert legere mei, habeo malorum eu vel, et pro summo prodesset."
+                android:id="@+id/profile_userabout"
+                android:layout_below="@+id/profile_About_text"
+                android:layout_alignStart="@+id/profile_About_text"
+                android:textColor="#333333"
+                android:paddingBottom="5dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout5"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/profile_userabout"
+                android:layout_alignStart="@+id/profile_userabout" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignLeft="@+id/profile_AboutMeBox"
+            android:layout_alignRight="@+id/profile_AboutMeBox"
+            android:layout_below="@+id/profile_AboutMeBox"
+            android:id="@+id/profile_edu"
+            android:background="#FFFFFF"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Education"
+                android:id="@+id/profile_Edu_Label"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_edu_list"
+                android:layout_below="@+id/profile_Edu_Label"
+                android:layout_alignStart="@+id/profile_Edu_Label"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add university"
+                android:id="@+id/profile_edu_newedu"
+                android:layout_below="@+id/profile_edu_list"
+                android:layout_alignStart="@+id/profile_edu_list"
+                android:layout_marginTop="10dp"
+                android:layout_alignEnd="@+id/profile_edu_list"
+                android:background="@drawable/button_shpe_blue"
+                android:textStyle="bold"
+                android:textColor="#EEEEEE"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="#FFFFFF"
+            android:layout_below="@+id/profile_edu"
+            android:layout_alignStart="@+id/profile_edu"
+            android:padding="10dp"
+            android:id="@+id/profile_skillskeys_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Skills &amp; Keywords"
+                android:id="@+id/profile_skillskeys_text"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_skillskeys_list"
+                android:layout_below="@+id/profile_skillskeys_text"
+                android:layout_alignStart="@+id/profile_skillskeys_text"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add skills or keyword"
+                android:id="@+id/button"
+                android:layout_below="@+id/profile_skillskeys_list"
+                android:background="@drawable/button_shpe_blue"
+                android:layout_alignEnd="@+id/profile_skillskeys_list"
+                android:layout_alignStart="@+id/profile_skillskeys_list"
+                android:textColor="#EEEEEE"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

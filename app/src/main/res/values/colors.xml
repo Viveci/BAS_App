@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="bcg" type="color">#439147</item>
+    <item name="bcg_norm" type="color">#439147</item>
+    <item name="bcg_foc" type="color">#437747</item>
+    <item name="bcg_pressed" type="color">#437747</item>
+    <item name="bcg_hollow" type="color">#8ebd90</item>
+    <item name="white" type="color">#FFFFFF</item>
+    <item name="white_pressed" type="color">#DDDDDD</item>
+
+    <item name="bcg_blue_norm" type="color">#016699</item>
+    <item name="bcg_blue_foc" type="color">#00547e</item>
+    <item name="bcg_pressed_pressed" type="color">#00547e</item>
+    
+    <item name="list_divider" type="color">#CCCCCC</item>
+    <item name="list_item_title" type="color">#757575</item>
+    <item name="list_background" type="color">#FFFFFF</item>
+    <item name="list_background_pressed" type="color">#DDDDDD</item>
+    <item name="counter_text_bg" type="color">#DDDDDD</item>
+    <item name="counter_text_color" type="color">#AAAAAA</item>
+
+    <color name="ColorPrimary">#439147</color>
+    <color name="ColorPrimaryDark">#437747</color>
+    <color name="tabsScrollColor">#CCCCCC</color>
+
+</resources>
