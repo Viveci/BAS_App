@@ -16,6 +16,9 @@ import com.dev.vivec.bookastudent.Code.Fragments.Contact;
 import com.dev.vivec.bookastudent.Code.Fragments.FindJobs;
 import com.dev.vivec.bookastudent.Code.Fragments.Home;
 import com.dev.vivec.bookastudent.Code.Fragments.MyJobs;
+import com.dev.vivec.bookastudent.Code.Fragments.Notifications;
+import com.dev.vivec.bookastudent.Code.Fragments.Ratings;
+import com.dev.vivec.bookastudent.Code.Fragments.Settings;
 import com.dev.vivec.bookastudent.R;
 
 
@@ -81,8 +84,6 @@ public class NewMain extends AppCompatActivity {
                             fragmentTransaction.commit();
                             return true;
 
-                        // For rest of the options we just show a toast on click
-
                         case R.id.MyJobs:
                             Toast.makeText(getApplicationContext(), "My jobs selected", Toast.LENGTH_SHORT).show();
                             fragmentTransaction.replace(R.id.frame, new MyJobs());
@@ -95,21 +96,21 @@ public class NewMain extends AppCompatActivity {
                             return true;
                         case R.id.Rating:
                             Toast.makeText(getApplicationContext(), "Ratings selected", Toast.LENGTH_SHORT).show();
-                            fragmentTransaction.replace(R.id.frame, new Contact());
+                            fragmentTransaction.replace(R.id.frame, new Ratings());
                             fragmentTransaction.commit();
                             return true;
                         case R.id.Notifications:
                             Toast.makeText(getApplicationContext(), "Notification selected", Toast.LENGTH_SHORT).show();
-                            fragmentTransaction.replace(R.id.frame, new Contact());
+                            fragmentTransaction.replace(R.id.frame, new Notifications());
                             fragmentTransaction.commit();
                             return true;
-                        case R.id.trash:
-                            Toast.makeText(getApplicationContext(), "Undefined", Toast.LENGTH_SHORT).show();
-                            fragmentTransaction.replace(R.id.frame, new Contact());
+                        case R.id.settings:
+                            Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_SHORT).show();
+                            fragmentTransaction.replace(R.id.frame, new Settings());
                             fragmentTransaction.commit();
                             return true;
-                        case R.id.spam:
-                            Toast.makeText(getApplicationContext(), "Undefined", Toast.LENGTH_SHORT).show();
+                        case R.id.contact:
+                            Toast.makeText(getApplicationContext(), "contact", Toast.LENGTH_SHORT).show();
                             fragmentTransaction.replace(R.id.frame, new Contact());
                             fragmentTransaction.commit();
                             return true;
@@ -148,10 +149,6 @@ public class NewMain extends AppCompatActivity {
             actionBarDrawerToggle.syncState();
 
 
-
-
-
-
         }
 
         @Override
@@ -170,6 +167,7 @@ public class NewMain extends AppCompatActivity {
 
             //noinspection SimplifiableIfStatement
             if (id == R.id.action_settings) {
+                Toast.makeText(this,"Setting pressed",Toast.LENGTH_SHORT).show();
                 return true;
             }
 

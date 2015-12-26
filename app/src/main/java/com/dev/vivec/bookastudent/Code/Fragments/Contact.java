@@ -26,4 +26,12 @@ public class Contact extends android.support.v4.app.Fragment {
 
             return rootView;
         }
+
+    public void onPause(){
+        super.onPause();
+    }
+
+    public void onResume(){
+        super.onResume();
+    }
 }

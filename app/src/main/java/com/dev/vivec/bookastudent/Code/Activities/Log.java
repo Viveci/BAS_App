@@ -32,21 +32,21 @@ public class Log extends AppCompatActivity {
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Logging in...",
                             Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(Log.this,AnotherActivity.class);
+                    Intent i = new Intent(Log.this,NewMain.class);
                     startActivity(i);
                     overridePendingTransition(R.anim.move_right, R.anim.move_left);
                 }
             });
 
         }
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
             getMenuInflater().inflate(R.menu.menu_log_reg, menu);
             return true;
         }
 
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
 
             if (id == R.id.action_settings) {

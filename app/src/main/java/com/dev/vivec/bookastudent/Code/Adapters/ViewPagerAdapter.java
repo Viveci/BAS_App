@@ -4,9 +4,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.dev.vivec.bookastudent.Code.Fragments.Contact;
+import com.dev.vivec.bookastudent.Code.Fragments.CompletedJobs;
 import com.dev.vivec.bookastudent.Code.Fragments.FindJobs;
 import com.dev.vivec.bookastudent.Code.Fragments.Home;
+import com.dev.vivec.bookastudent.Code.Fragments.Invites;
+import com.dev.vivec.bookastudent.Code.Fragments.OneFragment;
+import com.dev.vivec.bookastudent.Code.Fragments.OngoingJobs;
+import com.dev.vivec.bookastudent.Code.Fragments.Pending;
+import com.dev.vivec.bookastudent.Code.Fragments.RecommendedJobs;
 
 import java.util.Locale;
 
@@ -21,7 +26,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Returns the number of tabs
         return 5;
     }
 
@@ -30,16 +34,15 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         // Returns a new instance of the fragment
         switch (position) {
             case 0:
-                Home h = new Home();
-                return h;
+                return new OngoingJobs();
             case 1:
-                return new FindJobs();
+                return new RecommendedJobs();
             case 2:
-                return new Contact();
+                return new Invites();
             case 3:
-                return new FindJobs();
+                return new Pending();
             case 4:
-                return new Home();
+                return new CompletedJobs();
         }
         return null;
     }
@@ -49,15 +52,15 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         Locale l = Locale.getDefault();
         switch (position) {
             case 0:
-                return "Profile".toUpperCase(l);
+                return "Ongoing jobs".toUpperCase(l);
             case 1:
-                return "Find a job".toUpperCase(l);
+                return "Recommended jobs".toUpperCase(l);
             case 2:
-                return "Tralalalal".toUpperCase(l);
+                return "Invites".toUpperCase(l);
             case 3:
-                return "Tralala".toUpperCase(l);
+                return "Pending jobs".toUpperCase(l);
             case 4:
-                return "Tralalalal".toUpperCase(l);
+                return "Completed jobs".toUpperCase(l);
         }
         return null;
     }

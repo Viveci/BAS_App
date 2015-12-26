@@ -50,8 +50,8 @@
     <string name="Notifications">Notifications</string>
 
     <string name="subheader">Subheader</string>
-    <string name="trash_string">Trash</string>
-    <string name="spam_string">Spams</string>
+    <string name="Settings">Settings</string>
+    <string name="contact">Contact</string>
     <string name="closeDrawer">Navigation View</string>
     <string name="openDrawer">Navigation View Closed</string>
 
