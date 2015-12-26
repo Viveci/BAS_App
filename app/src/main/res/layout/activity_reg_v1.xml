@@ -25,15 +25,14 @@ android:fillViewport="true"
         android:text="Register"
         android:id="@+id/reg_log"
         android:background="@drawable/button_shape"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
         android:textStyle="bold"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="15dp" />
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/reg_input_pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
 
     <TextView
         android:layout_width="wrap_content"

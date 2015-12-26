@@ -31,7 +31,7 @@
             android:name=".Code.Activities.Log"
             android:screenOrientation="portrait"
             android:label="Login"
-            android:theme="@style/CustomTheme"
+            android:theme="@style/CustomTheme2"
             android:parentActivityName=".Code.Activities.LogReg"
             >
             <meta-data
@@ -43,7 +43,7 @@
             android:name=".Code.Activities.Reg"
             android:screenOrientation="portrait"
             android:label="Registration"
-            android:theme="@style/CustomTheme"
+            android:theme="@style/CustomTheme2"
             android:parentActivityName=".Code.Activities.LogReg"
             >
             <meta-data
@@ -55,7 +55,6 @@
             android:name=".Code.Activities.MainActivity"
             android:screenOrientation="portrait"
             android:label="Book a Student"
-            android:icon="@drawable/ic_drawer"
             android:theme="@style/CustomTheme">
         </activity>
 
@@ -63,7 +62,6 @@
             android:name=".Code.Activities.AnotherActivity"
             android:screenOrientation="portrait"
             android:label="Book a Student"
-            android:icon="@drawable/ic_drawer"
             android:theme="@style/CustomTheme2">
         </activity>
 
@@ -71,7 +69,6 @@
             android:name=".Code.Activities.NewMain"
             android:screenOrientation="portrait"
             android:label="Book a Student"
-            android:icon="@drawable/ic_drawer"
             android:theme="@style/CustomTheme2">
         </activity>
 
