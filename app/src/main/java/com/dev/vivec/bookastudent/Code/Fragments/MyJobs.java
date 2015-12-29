@@ -37,7 +37,7 @@ public class MyJobs extends android.support.v4.app.Fragment {
         viewPager.setAdapter(new ViewPagerAdapter(getChildFragmentManager()));
 
         tabLayout = (SlidingTabLayout) x.findViewById(R.id.tabs);
-        tabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.white_pressed));
+        tabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.bcg_hollow));
         tabLayout.setDistributeEvenly(true);
         tabLayout.setViewPager(viewPager);
         tabLayout.setBackgroundColor(Color.parseColor("#EEEEEE"));

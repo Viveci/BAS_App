@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.dev.vivec.bookastudent.R;
@@ -19,12 +20,14 @@ import com.dev.vivec.bookastudent.R;
 public class Log extends AppCompatActivity {
 
     private Button log;
+    private EditText email;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_log);
             log = (Button) findViewById(R.id.log_log);
+            email = (EditText) findViewById(R.id.log_input_email);
 
 
             log.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +36,15 @@ public class Log extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Logging in...",
                             Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(Log.this,NewMain.class);
+
+                    if(email.getText().toString().equals("comp")){
+                        i.putExtra("COLOR",getResources().getColor(R.color.bcg_blue_norm));
+                    }
+
+                    if(email.getText().toString().equals("admin")){
+                        i.putExtra("COLOR",getResources().getColor(R.color.admin));
+                    }
+
                     startActivity(i);
                     overridePendingTransition(R.anim.move_right, R.anim.move_left);
                 }

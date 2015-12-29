@@ -9,10 +9,11 @@
 
     <style name="CustomTheme2"
         parent="@style/Theme.AppCompat.Light.NoActionBar">
-    </style>
+     </style>
 
     <style name="MyActionBar"
         parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="background">@color/bcg</item>
     </style>
+
 </resources>

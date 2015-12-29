@@ -52,20 +52,6 @@
         </activity>
 
         <activity
-            android:name=".Code.Activities.MainActivity"
-            android:screenOrientation="portrait"
-            android:label="Book a Student"
-            android:theme="@style/CustomTheme">
-        </activity>
-
-        <activity
-            android:name=".Code.Activities.AnotherActivity"
-            android:screenOrientation="portrait"
-            android:label="Book a Student"
-            android:theme="@style/CustomTheme2">
-        </activity>
-
-        <activity
             android:name=".Code.Activities.NewMain"
             android:screenOrientation="portrait"
             android:label="Book a Student"

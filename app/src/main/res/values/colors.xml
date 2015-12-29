@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/tools">
     <item name="bcg" type="color">#439147</item>
     <item name="bcg_norm" type="color">#439147</item>
     <item name="bcg_foc" type="color">#437747</item>
@@ -22,5 +22,7 @@
     <color name="ColorPrimary">#439147</color>
     <color name="ColorPrimaryDark">#437747</color>
     <color name="tabsScrollColor">#CCCCCC</color>
+
+    <color name="admin">#F44336</color>
 
 </resources>

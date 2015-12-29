@@ -6,7 +6,4 @@
     android:elevation="2dp"
     android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
     xmlns:android="http://schemas.android.com/apk/res/android" >
-
-
-
     </android.support.v7.widget.Toolbar>

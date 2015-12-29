@@ -28,6 +28,7 @@ import com.dev.vivec.bookastudent.R;
 public class NewMain extends AppCompatActivity {
 
         //Defining Variables
+        private int toolBarColor;
         private Toolbar toolbar;
         private NavigationView navigationView;
         private DrawerLayout drawerLayout;
@@ -41,6 +42,13 @@ public class NewMain extends AppCompatActivity {
             // Initializing Toolbar and setting it as the actionbar
             toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
+
+            //Fetching extras
+            Bundle extras = getIntent().getExtras();
+            if(extras != null){
+                toolBarColor = extras.getInt("COLOR");
+                toolbar.setBackgroundColor(toolBarColor);
+            }
 
             //Initializing NavigationView
             navigationView = (NavigationView) findViewById(R.id.navigation_view);
