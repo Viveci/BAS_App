@@ -31,7 +31,7 @@ public class Reg extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Reg.this, NewMain.class);
+                Intent i = new Intent(Reg.this, Student_Main.class);
 
                 if(email.getText().toString().equals("comp")){
                     i.putExtra("COLOR",getResources().getColor(R.color.bcg_blue_norm));

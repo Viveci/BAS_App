@@ -35,14 +35,21 @@ public class Log extends AppCompatActivity {
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Logging in...",
                             Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(Log.this,NewMain.class);
 
-                    if(email.getText().toString().equals("comp")){
+                    Intent i = null;
+
+                    if(email.getText().toString().equals("com")){
+                        i = new Intent(Log.this,Company_Main.class);
                         i.putExtra("COLOR",getResources().getColor(R.color.bcg_blue_norm));
                     }
 
-                    if(email.getText().toString().equals("admin")){
+                    else if(email.getText().toString().equals("admin")){
+                        i = new Intent(Log.this,Admin_Main.class);
                         i.putExtra("COLOR",getResources().getColor(R.color.admin));
+                    }
+
+                    else{
+                        i = new Intent(Log.this,Student_Main.class);
                     }
 
                     startActivity(i);

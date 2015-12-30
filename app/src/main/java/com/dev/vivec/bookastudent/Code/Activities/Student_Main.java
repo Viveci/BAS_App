@@ -25,7 +25,7 @@ import com.dev.vivec.bookastudent.R;
 /**
  * Created by Teperics Márton on 2015.12.02..
  */
-public class NewMain extends AppCompatActivity {
+public class Student_Main extends AppCompatActivity {
 
         //Defining Variables
         private int toolBarColor;

@@ -17,10 +17,10 @@ import com.dev.vivec.bookastudent.R;
  */
 public class MyJobs extends android.support.v4.app.Fragment {
 
-    public static SlidingTabLayout tabLayout;
-    public static ViewPager viewPager;
-    public static int int_items = 5 ;
-    public int currentItem;
+    private static SlidingTabLayout tabLayout;
+    private static ViewPager viewPager;
+    private static int int_items = 5 ;
+    private int currentItem;
     Toolbar toolbar;
 
     @Override
@@ -50,11 +50,6 @@ public class MyJobs extends android.support.v4.app.Fragment {
         super.onPause();
         currentItem = viewPager.getCurrentItem();
         viewPager.getAdapter().destroyItem(viewPager, currentItem, null);
-    }
-
-    public void onResume(){
-        super.onResume();
-        viewPager.getAdapter().finishUpdate(viewPager);
     }
 
 }

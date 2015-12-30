@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Home"
+            android:checked="false"
+            android:icon="@drawable/ic_home_black"
+            android:title="@string/comp_home" />
+
+        <item
+            android:id="@+id/Jobs"
+            android:checked="false"
+            android:icon="@drawable/ic_jobs"
+            android:title="@string/comp_Jobs" />
+
+        <item
+            android:id="@+id/CRatings"
+            android:checked="false"
+            android:icon="@drawable/ic_star_black"
+            android:title="@string/comp_Ratings" />
+
+        <item
+            android:id="@+id/CNotifications"
+            android:checked="false"
+            android:icon="@drawable/ic_email_black"
+            android:title="@string/Notifications" />
+
+        <item
+            android:enabled="false"/>
+
+        <item
+            android:id="@+id/settings"
+            android:checked="false"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/Settings" />
+        <item
+            android:id="@+id/contact"
+            android:checked="false"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/contact" />
+
+    </group>
+</menu>
