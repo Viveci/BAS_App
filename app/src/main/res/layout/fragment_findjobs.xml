@@ -49,7 +49,7 @@
                 android:id="@+id/findajob_button_find"
                 android:layout_alignTop="@+id/findajob_input_search"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/ic_search_black_24dp"
+                android:src="@drawable/ic_search_white_24dp"
                 android:background="@drawable/search_button_shape" />
 
         </RelativeLayout>

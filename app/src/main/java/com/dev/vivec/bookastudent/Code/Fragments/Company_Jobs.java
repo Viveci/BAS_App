@@ -16,7 +16,7 @@ import com.dev.vivec.bookastudent.R;
 /**
  * Created by Teperics Márton on 2015.11.16..
  */
-public class PostedJobs extends Fragment {
+public class Company_Jobs extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

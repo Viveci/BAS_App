@@ -4,49 +4,31 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/Home"
+            android:id="@+id/AHome"
             android:checked="false"
             android:icon="@drawable/ic_home_black"
-            android:title="@string/Home" />
+            android:title="@string/admin_home" />
 
         <item
-            android:id="@+id/MyJobs"
+            android:id="@+id/ADatabase"
             android:checked="false"
-            android:icon="@drawable/ic_jobs"
-            android:title="@string/MyJobs" />
+            android:icon="@drawable/ic_database_black"
+            android:title="@string/admin_db" />
 
         <item
-            android:id="@+id/FindJobs"
+            android:id="@+id/ANotifications"
             android:checked="false"
-            android:icon="@drawable/ic_search"
-            android:title="@string/FindJobs" />
-
-        <item
-            android:id="@+id/Rating"
-            android:checked="false"
-            android:icon="@drawable/ic_star_black"
-            android:title="@string/Rating" />
-
-        <item
-            android:id="@+id/Notifications"
-            android:checked="false"
-            android:icon="@drawable/ic_email_black"
-            android:title="@string/Notifications" />
-
-        <item
-            android:id="@+id/asdasd"
-            android:checked="false"
-            android:icon="@drawable/ic_email_black"
-            android:title="@string/Notifications" />
+            android:icon="@drawable/ic_notifications_black"
+            android:title="@string/admin_notifications" />
 
         <item
             android:enabled="false"/>
 
         <item
-            android:id="@+id/settings"
+            android:id="@+id/Asettings"
             android:checked="false"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:title="@string/Settings" />
+            android:title="@string/admin_settings" />
         <item
             android:id="@+id/contact"
             android:checked="false"

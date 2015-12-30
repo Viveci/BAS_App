@@ -4,13 +4,13 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/Home"
+            android:id="@+id/CHome"
             android:checked="false"
             android:icon="@drawable/ic_home_black"
             android:title="@string/comp_home" />
 
         <item
-            android:id="@+id/Jobs"
+            android:id="@+id/CJobs"
             android:checked="false"
             android:icon="@drawable/ic_jobs"
             android:title="@string/comp_Jobs" />
@@ -18,23 +18,24 @@
         <item
             android:id="@+id/CRatings"
             android:checked="false"
-            android:icon="@drawable/ic_star_black"
+            android:icon="@drawable/ic_star_full"
             android:title="@string/comp_Ratings" />
 
         <item
             android:id="@+id/CNotifications"
             android:checked="false"
-            android:icon="@drawable/ic_email_black"
+            android:icon="@drawable/ic_notifications_black"
             android:title="@string/Notifications" />
 
         <item
             android:enabled="false"/>
 
         <item
-            android:id="@+id/settings"
+            android:id="@+id/Csettings"
             android:checked="false"
             android:icon="@drawable/ic_settings_black_24dp"
             android:title="@string/Settings" />
+
         <item
             android:id="@+id/contact"
             android:checked="false"

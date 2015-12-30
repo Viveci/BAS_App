@@ -10,6 +10,7 @@
 
     <item name="bcg_blue_norm" type="color">#016699</item>
     <item name="bcg_blue_foc" type="color">#00547e</item>
+    <item name="bcg_blue_hollow" type="color">#018dd3</item>
     <item name="bcg_pressed_pressed" type="color">#00547e</item>
     
     <item name="list_divider" type="color">#CCCCCC</item>

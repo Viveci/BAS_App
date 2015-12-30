@@ -59,4 +59,11 @@
     <string name="comp_Jobs">Posted jobs</string>
     <string name="comp_Ratings">Ratings</string>
 
+    <string name="admin_home">Overview</string>
+    <string name="admin_db">Database</string>
+    <string name="admin_notifications">Notifications</string>
+    <string name="admin_settings">Settings</string>
+
+
+
 </resources>

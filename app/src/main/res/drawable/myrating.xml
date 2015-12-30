@@ -16,8 +16,8 @@
                 <corners android:radius="2dip" />
                 <gradient
                     android:angle="0"
-                    android:endColor="@color/bcg_blue_foc"
-                    android:startColor="@color/bcg_blue_norm" />
+                    android:endColor="@color/bcg_blue_hollow"
+                    android:startColor="@color/bcg_blue_foc" />
             </shape>
         </clip>
     </item>

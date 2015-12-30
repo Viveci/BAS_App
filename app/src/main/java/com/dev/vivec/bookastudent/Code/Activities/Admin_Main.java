@@ -15,13 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.dev.vivec.bookastudent.Code.Fragments.ADatabase;
+import com.dev.vivec.bookastudent.Code.Fragments.Admin_Home;
+import com.dev.vivec.bookastudent.Code.Fragments.Admin_Notifications;
+import com.dev.vivec.bookastudent.Code.Fragments.Admin_Settings;
 import com.dev.vivec.bookastudent.Code.Fragments.Contact;
-import com.dev.vivec.bookastudent.Code.Fragments.FindJobs;
 import com.dev.vivec.bookastudent.Code.Fragments.Home;
-import com.dev.vivec.bookastudent.Code.Fragments.MyJobs;
-import com.dev.vivec.bookastudent.Code.Fragments.Notifications;
-import com.dev.vivec.bookastudent.Code.Fragments.Ratings;
-import com.dev.vivec.bookastudent.Code.Fragments.Settings;
 import com.dev.vivec.bookastudent.R;
 
 /**
@@ -57,7 +56,7 @@ public class Admin_Main extends AppCompatActivity {
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
 
         //Default fragment
-        fragmentTransaction.replace(R.id.frame, new Home());
+        fragmentTransaction.replace(R.id.frame, new Admin_Home());
         fragmentTransaction.commit();
 
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
@@ -81,43 +80,27 @@ public class Admin_Main extends AppCompatActivity {
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
 
-                    case R.id.detail_headerBar:
-                        Toast.makeText(getApplicationContext(), "Profile selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Home());
-                        fragmentTransaction.commit();
-                        return true;
-
-
                     //Replacing the main content with HomeFragment Which is our Inbox View;
-                    case R.id.Home:
+                    case R.id.AHome:
                         Toast.makeText(getApplicationContext(), "Home selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Home());
+                        fragmentTransaction.replace(R.id.frame, new Admin_Home());
                         fragmentTransaction.commit();
                         return true;
 
-                    case R.id.MyJobs:
+                    case R.id.ADatabase:
                         Toast.makeText(getApplicationContext(), "My jobs selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new MyJobs());
+                        fragmentTransaction.replace(R.id.frame, new ADatabase());
                         fragmentTransaction.commit();
                         return true;
-                    case R.id.FindJobs:
+                    case R.id.ANotifications:
                         Toast.makeText(getApplicationContext(), "Find a job selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new FindJobs());
+                        fragmentTransaction.replace(R.id.frame, new Admin_Notifications());
                         fragmentTransaction.commit();
                         return true;
-                    case R.id.Rating:
-                        Toast.makeText(getApplicationContext(), "Ratings selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Ratings());
-                        fragmentTransaction.commit();
-                        return true;
-                    case R.id.Notifications:
-                        Toast.makeText(getApplicationContext(), "Notification selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Notifications());
-                        fragmentTransaction.commit();
-                        return true;
-                    case R.id.settings:
+
+                    case R.id.Asettings:
                         Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Settings());
+                        fragmentTransaction.replace(R.id.frame, new Admin_Settings());
                         fragmentTransaction.commit();
                         return true;
                     case R.id.contact:

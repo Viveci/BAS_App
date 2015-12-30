@@ -15,14 +15,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.dev.vivec.bookastudent.Code.Fragments.Company_Home;
+import com.dev.vivec.bookastudent.Code.Fragments.Company_Notifications;
+import com.dev.vivec.bookastudent.Code.Fragments.Company_Ratings;
+import com.dev.vivec.bookastudent.Code.Fragments.Company_Settings;
 import com.dev.vivec.bookastudent.Code.Fragments.Contact;
-import com.dev.vivec.bookastudent.Code.Fragments.FindJobs;
-import com.dev.vivec.bookastudent.Code.Fragments.Home;
-import com.dev.vivec.bookastudent.Code.Fragments.MyJobs;
-import com.dev.vivec.bookastudent.Code.Fragments.Notifications;
-import com.dev.vivec.bookastudent.Code.Fragments.PostedJobs;
-import com.dev.vivec.bookastudent.Code.Fragments.Ratings;
-import com.dev.vivec.bookastudent.Code.Fragments.Settings;
+import com.dev.vivec.bookastudent.Code.Fragments.Company_Jobs;
 import com.dev.vivec.bookastudent.R;
 
 /**
@@ -58,7 +56,7 @@ public class Company_Main extends AppCompatActivity {
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
 
         //Default fragment
-        fragmentTransaction.replace(R.id.frame, new Home());
+        fragmentTransaction.replace(R.id.frame, new Company_Home());
         fragmentTransaction.commit();
 
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
@@ -84,36 +82,36 @@ public class Company_Main extends AppCompatActivity {
 
                     case R.id.detail_headerBar:
                         Toast.makeText(getApplicationContext(), "Profile selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Home());
+                        fragmentTransaction.replace(R.id.frame, new Company_Home());
                         fragmentTransaction.commit();
                         return true;
 
 
                     //Replacing the main content with HomeFragment Which is our Inbox View;
-                    case R.id.Home:
+                    case R.id.CHome:
                         Toast.makeText(getApplicationContext(), "Home selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Home());
+                        fragmentTransaction.replace(R.id.frame, new Company_Home());
                         fragmentTransaction.commit();
                         return true;
 
-                    case R.id.Jobs:
+                    case R.id.CJobs:
                         Toast.makeText(getApplicationContext(), "My posted jobs selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new PostedJobs());
+                        fragmentTransaction.replace(R.id.frame, new Company_Jobs());
                         fragmentTransaction.commit();
                         return true;
                     case R.id.CRatings:
                         Toast.makeText(getApplicationContext(), "Ratings selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Ratings());
+                        fragmentTransaction.replace(R.id.frame, new Company_Ratings());
                         fragmentTransaction.commit();
                         return true;
                     case R.id.CNotifications:
                         Toast.makeText(getApplicationContext(), "Notification selected", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Notifications());
+                        fragmentTransaction.replace(R.id.frame, new Company_Notifications());
                         fragmentTransaction.commit();
                         return true;
-                    case R.id.settings:
+                    case R.id.Csettings:
                         Toast.makeText(getApplicationContext(), "Settings", Toast.LENGTH_SHORT).show();
-                        fragmentTransaction.replace(R.id.frame, new Settings());
+                        fragmentTransaction.replace(R.id.frame, new Company_Settings());
                         fragmentTransaction.commit();
                         return true;
                     case R.id.contact:
