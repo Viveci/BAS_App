@@ -3,6 +3,7 @@ package com.dev.vivec.bookastudent.Code.Fragments;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import com.dev.vivec.bookastudent.R;
  */
 public class Contact extends android.support.v4.app.Fragment {
 
-        ActionBar ab;
+        private Toolbar toolbar;
 
         public Contact(){}
 
@@ -23,6 +24,9 @@ public class Contact extends android.support.v4.app.Fragment {
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_contact, container, false);
+
+            toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+            toolbar.setTitle("Contact us");
 
             return rootView;
         }

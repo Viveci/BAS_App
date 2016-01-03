@@ -9,15 +9,17 @@ public class CompanyItem {
         private String Type;
         private String Desc;
         private int icon;
+        private String date;
 
         public CompanyItem(){}
 
 
-        public CompanyItem(String company, String type, String desc, int icon) {
+        public CompanyItem(String company, String type, String desc, int icon, String date) {
             Company = company;
             Type = type;
             Desc = desc;
             this.icon = icon;
+            this.date = date;
         }
 
     public String getCompany() {
@@ -50,5 +52,13 @@ public class CompanyItem {
 
     public void setIcon(int icon) {
         this.icon = icon;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

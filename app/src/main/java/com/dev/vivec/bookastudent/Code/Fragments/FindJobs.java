@@ -3,6 +3,7 @@ package com.dev.vivec.bookastudent.Code.Fragments;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,8 @@ public class FindJobs extends android.support.v4.app.Fragment {
 
     private Context mc;
 
+    private Toolbar toolbar;
+
     public FindJobs(){}
 
     @Override
@@ -45,12 +48,15 @@ public class FindJobs extends android.support.v4.app.Fragment {
 
         mc = this.getActivity().getApplicationContext();
 
-        sony = new CompanyItem("Sony", "Web dev", "Lorem ipsum dolor sit amet, ius id iudicabit" +
-                " liberavisse, has at laboramus intellegat.", R.drawable.sony);
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+        toolbar.setTitle("Find a job");
 
-        dell = new CompanyItem("Dell","Product designer","MagicKapr used fly",R.drawable.dell);
-        apple = new CompanyItem("Apple","Layout designer","Graves can't have a f#&@ cigar",R.drawable.apple);
-        google = new CompanyItem("Google","Android Material Design Inventor","Nonsense nonsense",R.drawable.google);
+        sony = new CompanyItem("Sony", "Web dev", "Lorem ipsum dolor sit amet, ius id iudicabit" +
+                " liberavisse, has at laboramus intellegat.", R.drawable.sony,"2015/01/01");
+
+        dell = new CompanyItem("Dell","Product designer","MagicKapr used fly",R.drawable.dell,"2015/01/01");
+        apple = new CompanyItem("Apple","Layout designer","Graves can't have a f#&@ cigar",R.drawable.apple,"2015/01/01");
+        google = new CompanyItem("Google","Android Material Design Inventor","Nonsense nonsense",R.drawable.google,"2015/01/01");
 
         companys = new ArrayList<CompanyItem>();
 

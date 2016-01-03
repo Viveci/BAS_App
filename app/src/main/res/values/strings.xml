@@ -44,9 +44,9 @@
     <string name="navigation_item_2">Events</string>
 
     <string name="MyJobs">My jobs</string>
-    <string name="Home">Home</string>
+    <string name="Home">Profile</string>
     <string name="FindJobs">Find a job</string>
-    <string name="Rating">Rating</string>
+    <string name="Rating">Ratings</string>
     <string name="Notifications">Notifications</string>
 
     <string name="subheader">Subheader</string>

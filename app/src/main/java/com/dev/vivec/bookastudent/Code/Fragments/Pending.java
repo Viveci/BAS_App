@@ -5,13 +5,27 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
+import com.dev.vivec.bookastudent.Code.Adapters.CompListAdapter;
+import com.dev.vivec.bookastudent.Code.Model.CompanyItem;
 import com.dev.vivec.bookastudent.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by Teperics Márton on 2015.12.26..
  */
 public class Pending extends Fragment {
+
+    private CompanyItem sony;
+    private CompanyItem dell;
+    private CompanyItem apple;
+    private CompanyItem google;
+
+    private ArrayList<CompanyItem> companys;
+    private CompListAdapter adapter;
+    private ListView list;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,7 +36,32 @@ public class Pending extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pending, container, false);
+        View x = inflater.inflate(R.layout.fragment_pending, container, false);
+
+        sony = new CompanyItem("Sony", "Web dev", "Lorem ipsum dolor sit amet, ius id iudicabit" +
+                " liberavisse, has at laboramus intellegat.", R.drawable.sony,"2015/01/01");
+
+        dell = new CompanyItem("Dell","Product designer","MagicKapr used fly",R.drawable.dell,"2015/01/01");
+        apple = new CompanyItem("Apple","Layout designer","Graves can't have a f#&@ cigar",R.drawable.apple,"2015/01/01");
+        google = new CompanyItem("Google","Android Material Design Inventor","Nonsense nonsense",R.drawable.google,"2015/01/01");
+
+        companys = new ArrayList<CompanyItem>();
+
+        companys.add(sony);
+        companys.add(sony);
+        companys.add(sony);
+        companys.add(sony);
+        companys.add(sony);
+        companys.add(sony);
+        companys.add(sony);
+
+        list = (ListView) x.findViewById(R.id.pending_list);
+
+        adapter = new CompListAdapter(this.getActivity().getApplicationContext(),companys);
+
+        list.setAdapter(adapter);
+
+        return x;
     }
 
     public void onPause(){

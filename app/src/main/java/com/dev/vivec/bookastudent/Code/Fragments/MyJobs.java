@@ -36,6 +36,9 @@ public class MyJobs extends android.support.v4.app.Fragment {
          */
         viewPager.setAdapter(new ViewPagerAdapter(getChildFragmentManager()));
 
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+        toolbar.setTitle("My jobs");
+
         tabLayout = (SlidingTabLayout) x.findViewById(R.id.tabs);
         tabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.bcg_hollow));
         tabLayout.setDistributeEvenly(true);

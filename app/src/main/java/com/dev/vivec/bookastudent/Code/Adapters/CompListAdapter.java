@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.dev.vivec.bookastudent.Code.Model.CompanyItem;
 import com.dev.vivec.bookastudent.R;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 /**
@@ -54,11 +56,13 @@ public class CompListAdapter  extends BaseAdapter {
             TextView txtTitle = (TextView) convertView.findViewById(R.id.list_comp_title);
             TextView txttype = (TextView) convertView.findViewById(R.id.list_comp_type);
             TextView txtdesc = (TextView) convertView.findViewById(R.id.list_comp_desc);
+            TextView txtdate = (TextView) convertView.findViewById(R.id.list_comp_date);
 
             imgIcon.setImageResource(companylist.get(position).getIcon());
             txtTitle.setText(companylist.get(position).getCompany());
             txttype.setText(companylist.get(position).getType());
             txtdesc.setText(companylist.get(position).getDesc());
+            txtdate.setText(companylist.get(position).getDate());
 
             return convertView;
         }
