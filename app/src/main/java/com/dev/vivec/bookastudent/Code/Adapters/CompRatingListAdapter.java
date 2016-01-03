@@ -2,6 +2,7 @@ package com.dev.vivec.bookastudent.Code.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,13 +65,16 @@ public class CompRatingListAdapter extends BaseAdapter {
         double rating = list.get(position).getRating();
         for(int i = 1; i < (stars.size()+1); i++){
             if(i<=rating){
-                stars.get(i-1).setImageResource(R.drawable.ic_star_full);
+                stars.get(i-1).setImageResource(R.drawable.ic_bluestar_full);
+                stars.get(i-1).setColorFilter(Color.parseColor("#016699"));
             }
             else if(rating+0.5 == (i)){
-                stars.get(i-1).setImageResource(R.drawable.ic_star_half);
+                stars.get(i-1).setImageResource(R.drawable.ic_bluestar_half);
+                stars.get(i-1).setColorFilter(Color.parseColor("#016699"));
             }
             else if( rating < i){
-                stars.get(i-1).setImageResource(R.drawable.ic_star_empty);
+                stars.get(i-1).setImageResource(R.drawable.ic_bluestar_empty);
+                stars.get(i-1).setColorFilter(Color.parseColor("#016699"));
             }
         }
 

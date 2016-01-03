@@ -4,7 +4,7 @@
     android:layout_height="150dp"
     android:background="#FFFFFF"
     android:padding="10dp"
-    android:clickable="true">
+    android:clickable="false">
 
     <ImageView
         android:layout_width="100dp"
