@@ -8,7 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.dev.vivec.bookastudent.Code.Adapters.NotificationAdapter;
+import com.dev.vivec.bookastudent.Code.Model.Notification;
 import com.dev.vivec.bookastudent.R;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /**
  * Created by Teperics Márton on 2015.12.26..
@@ -17,6 +22,8 @@ public class Notifications extends Fragment {
 
     private Toolbar toolbar;
     private ListView list;
+    private ArrayList<Notification> notifications;
+    private NotificationAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +41,22 @@ public class Notifications extends Fragment {
 
         list = (ListView) x.findViewById(R.id.notifications_list);
 
+        notifications = new ArrayList<>();
 
+        Notification n = new Notification("New job","2015/01/03","Dell","Lorem ipsum dolor sit amet," +
+                " ius id iudicabit liberavisse, has at laboramus intellegat. Et m",true);
+        Notification m = new Notification("New job","2015/01/03","Dell","Lorem ipsum dolor sit amet," +
+                " ius id iudicabit liberavisse, has at laboramus intellegat. Et m",false);
+        notifications.add(n);
+        notifications.add(m);
+        notifications.add(n);
+        notifications.add(m);
+        notifications.add(n);
+        notifications.add(m);
+        notifications.add(n);
+
+        adapter = new NotificationAdapter(this.getActivity().getApplicationContext(),notifications);
+        list.setAdapter(adapter);
 
         return x;
     }

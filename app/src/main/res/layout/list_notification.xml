@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/notification_list_date"
+        android:textColor="#666666"
+        android:layout_alignBottom="@+id/notification_list_title"
+        android:layout_alignParentEnd="true"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Title"
+        android:id="@+id/notification_list_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#666666"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sender"
+        android:id="@+id/notification_list_sender"
+        android:textColor="#666666"
+        android:layout_below="@+id/notification_list_title"
+        android:layout_alignParentStart="true"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="content"
+        android:id="@+id/notification_list_content"
+        android:textColor="#777777"
+        android:layout_below="@+id/notification_list_sender"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/notification_list_date" />
+
+</RelativeLayout>

@@ -8,13 +8,15 @@ public class Notification {
     private String title;
     private String date;
     private String sender;
+    private String content;
     private int type;
     private Boolean isNew;
 
-    public Notification(String title, String date, String sender, Boolean isNew) {
+    public Notification(String title, String date, String sender, String content, Boolean isNew) {
         this.title = title;
         this.date = date;
         this.sender = sender;
+        this.content = content;
         this.isNew = isNew;
     }
 
@@ -56,5 +58,13 @@ public class Notification {
 
     public void setIsNew(Boolean isNew) {
         this.isNew = isNew;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }
