@@ -7,10 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.dev.vivec.bookastudent.Code.Adapters.CompRatingListAdapter;
+import com.dev.vivec.bookastudent.Code.Model.CompanyRating;
 import com.dev.vivec.bookastudent.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by Teperics Márton on 2015.12.26..
@@ -22,6 +27,9 @@ public class Ratings extends Fragment {
     private ProgressBar ratingbar;
     private TextView ratingLabel;
     private Button details;
+    private ListView list;
+
+    private ArrayList<CompanyRating> ratings;
 
     private int i = 75;
 
@@ -65,6 +73,24 @@ public class Ratings extends Fragment {
             }
         });
 
+        list = (ListView) x.findViewById(R.id.ratings_myratings_list);
+
+        ratings = new ArrayList<>();
+
+        CompanyRating two = new CompanyRating("Dell",2.5);
+        CompanyRating three = new CompanyRating("Apple",3);
+        CompanyRating four = new CompanyRating("Google",4);
+        CompanyRating five = new CompanyRating("Dell",5);
+
+
+        ratings.add(three);
+        ratings.add(four);
+        ratings.add(five);
+        ratings.add(two);
+
+        CompRatingListAdapter adapter = new CompRatingListAdapter(this.getActivity().getApplicationContext(),ratings);
+
+        list.setAdapter(adapter);
 
         return x;
     }
