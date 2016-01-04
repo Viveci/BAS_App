@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.dev.vivec.bookastudent.R;
 
@@ -18,7 +19,10 @@ import com.dev.vivec.bookastudent.R;
 public class Contact extends android.support.v4.app.Fragment {
 
         private Toolbar toolbar;
-        private ImageButton facebook;
+        private ImageView facebook;
+        private ImageView instagram;
+        private ImageView twitter;
+        private ImageView linkedin;
 
         public Contact(){}
 
@@ -31,8 +35,7 @@ public class Contact extends android.support.v4.app.Fragment {
             toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
             toolbar.setTitle("Contact us");
 
-            facebook = (ImageButton) rootView.findViewById(R.id.contact_facebook);
-            facebook.setColorFilter(Color.parseColor("#FFFFFF"));
+
 
             return rootView;
         }

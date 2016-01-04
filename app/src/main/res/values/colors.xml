@@ -26,4 +26,9 @@
 
     <color name="admin">#F44336</color>
 
+    <color name="twitter_nor">#00aced</color>
+    <color name="instagram_norm">#517fa4</color>
+    <color name="link_norm">#007bb6</color>
+
+
 </resources>

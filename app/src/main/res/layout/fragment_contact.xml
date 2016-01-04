@@ -34,7 +34,7 @@
             android:background="@drawable/button_shpe_blue"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:textSize="18dp"
+            android:textSize="14dp"
             android:layout_marginTop="15dp" />
 
         <FrameLayout
@@ -49,12 +49,70 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="You can also find us on socail media. Follow us if you are interested in updates regarding Book a Student"
+            android:text="You can also find us on socail media. Follow us if you are interested in updates."
             android:id="@+id/contact_text2"
             android:layout_below="@+id/frameLayout8"
             android:layout_alignParentStart="true"
             android:layout_marginTop="15dp"
-            android:textColor="#333333" />
+            android:textColor="#333333"
+            android:textAlignment="gravity" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/contact_text2"
+            android:layout_alignParentStart="true"
+            android:stretchColumns="*"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tableLayout2">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contact_facebook"
+                    android:layout_column="0"
+                    android:background="@null"
+                    android:src="@drawable/faceb" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contact_linked"
+                    android:layout_column="1"
+                    android:src="@drawable/linkedl"
+                    android:background="@null" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contact_insta"
+                    android:layout_column="2"
+                    android:src="@drawable/insta"
+                    android:background="@null" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contact_twitter"
+                    android:layout_column="3"
+                    android:src="@drawable/twitterr"
+                    android:background="@null" />
+            </TableRow>
+        </TableLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/frameLayout10"
+            android:background="#AAAAAA"
+            android:layout_below="@+id/tableLayout2"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
 
     </RelativeLayout>
 </ScrollView>
