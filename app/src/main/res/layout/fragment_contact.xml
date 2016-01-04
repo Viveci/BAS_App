@@ -15,10 +15,46 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contact us"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/contact_label"
-            android:textSize="24dp" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Do you have complaints or compliments, have you spotted an error in our application or on our webpage, we want to hear about it via email"
+            android:id="@+id/contact_text1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:id="@+id/contact_email_button"
+            android:layout_below="@+id/contact_text1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_shpe_blue"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/frameLayout8"
+            android:background="#AAAAAA"
+            android:layout_below="@+id/contact_email_button"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="You can also find us on socail media. Follow us if you are interested in updates regarding Book a Student"
+            android:id="@+id/contact_text2"
+            android:layout_below="@+id/frameLayout8"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:textColor="#333333" />
+
     </RelativeLayout>
 </ScrollView>

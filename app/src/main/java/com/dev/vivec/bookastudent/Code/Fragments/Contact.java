@@ -1,12 +1,14 @@
 package com.dev.vivec.bookastudent.Code.Fragments;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.dev.vivec.bookastudent.R;
 
@@ -16,6 +18,7 @@ import com.dev.vivec.bookastudent.R;
 public class Contact extends android.support.v4.app.Fragment {
 
         private Toolbar toolbar;
+        private ImageButton facebook;
 
         public Contact(){}
 
@@ -27,6 +30,9 @@ public class Contact extends android.support.v4.app.Fragment {
 
             toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
             toolbar.setTitle("Contact us");
+
+            facebook = (ImageButton) rootView.findViewById(R.id.contact_facebook);
+            facebook.setColorFilter(Color.parseColor("#FFFFFF"));
 
             return rootView;
         }
