@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.dev.vivec.bookastudent.Code.Adapters.StudentRatingListAdatper;
+import com.dev.vivec.bookastudent.Code.Model.StudentRating;
 import com.dev.vivec.bookastudent.R;
 
 import org.w3c.dom.Text;
@@ -24,6 +27,9 @@ public class Company_Ratings extends Fragment {
 
     private Toolbar toolbar;
     private TextView sub;
+    private ListView list;
+    private StudentRatingListAdatper adapter;
+    private ArrayList<StudentRating> ratings;
 
     public Company_Ratings(){};
 
@@ -40,6 +46,7 @@ public class Company_Ratings extends Fragment {
         toolbar.setTitle("Ratings");
 
         double rating = 4.5;
+        ratings = new ArrayList<>();
 
         sub = (TextView) x.findViewById(R.id.comp_ratings_myrating_sub);
         sub.setText("100 feedback");
@@ -67,6 +74,25 @@ public class Company_Ratings extends Fragment {
                 stars.get(i-1).setColorFilter(Color.parseColor("#016699"));
             }
         }
+
+        StudentRating one = new StudentRating("John",75);
+        StudentRating two = new StudentRating("Matt",85);
+        StudentRating three = new StudentRating("Peter",100);
+
+        ratings.add(one);
+        ratings.add(two);
+        ratings.add(three);
+        ratings.add(two);
+        ratings.add(one);
+        ratings.add(one);
+        ratings.add(two);
+        ratings.add(three);
+        ratings.add(two);
+        ratings.add(one);
+
+        list = (ListView) x.findViewById(R.id.comp_ratings_myratings_list);
+        adapter = new StudentRatingListAdatper(getActivity().getApplicationContext(),ratings);
+        list.setAdapter(adapter);
 
         return x;
     }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="dummy"
+        android:id="@+id/student_list_label"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp"
+        android:gravity="center_vertical"
+        android:textColor="#333333"
+        android:layout_alignBottom="@+id/student_rating_progres"
+        android:layout_alignTop="@+id/student_rating_progres" />
+
+    <ProgressBar
+        android:id="@+id/student_rating_progres"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:progress="50"
+        android:progressDrawable="@drawable/studentratingbar"
+        android:indeterminate="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/student_list_label"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/student_list_rating"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/student_rating_progres"
+        android:layout_marginLeft="10dp" />
+</RelativeLayout>

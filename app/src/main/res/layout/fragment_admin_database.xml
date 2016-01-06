@@ -5,20 +5,105 @@
     >
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LogReg"
-        android:background="#FFFFFF">
+        android:layout_height="match_parent"
+        tools:context=".LogReg"
+        android:background="#EEEEEE"
+        android:padding="10dp">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Admin database"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/admin_database_label"
-            android:textSize="24dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="#FFFFFF"
+            android:id="@+id/admin_db_functions"
+            android:padding="10dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:stretchColumns="*"
+                android:orientation="horizontal"
+                android:id="@+id/admin_db_radiobuttons"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="#FFFFFF">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Student"
+                        android:id="@+id/admin_db_student"
+                        android:layout_column="0"
+                        android:checked="false"
+                        android:buttonTint="@color/bcg" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Company"
+                        android:id="@+id/admin_db_company"
+                        android:layout_column="0"
+                        android:checked="false"
+                        android:buttonTint="@color/bcg_blue_norm" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Admin"
+                        android:id="@+id/admin_db_admin"
+                        android:layout_column="0"
+                        android:checked="false"
+                        android:buttonTint="@color/admin" />
+                </TableRow>
+            </TableLayout>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:id="@+id/admin_db_searchtext"
+                android:background="#DDDDDD"
+                android:singleLine="true"
+                android:capitalize="sentences"
+                android:paddingLeft="5dp"
+                android:layout_below="@+id/admin_db_radiobuttons"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/admin_db_search" />
+
+            <ImageButton
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/admin_db_search"
+                android:src="@drawable/ic_search_white_24dp"
+                android:background="@drawable/search_button_shape"
+                android:layout_alignTop="@+id/admin_db_searchtext"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/admin_db_functions"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:id="@+id/admin_db_list"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/admin_db_userlist"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:choiceMode="singleChoice" />
+        </RelativeLayout>
     </RelativeLayout>
 </ScrollView>

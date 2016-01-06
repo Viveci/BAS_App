@@ -50,7 +50,7 @@ public class Ratings extends Fragment {
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("Ratings");
 
-        ratingbar = (ProgressBar) x.findViewById(R.id.ratings_myrating_progres);
+        ratingbar = (ProgressBar) x.findViewById(R.id.student_rating_progres);
         ratingbar.setProgress(i);
 
         ratingLabel = (TextView) x.findViewById(R.id.ratings_myrating_progreslabel);

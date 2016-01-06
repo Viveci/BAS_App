@@ -5,20 +5,185 @@
     >
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LogReg"
-        android:background="#FFFFFF">
+        android:layout_height="match_parent"
+        tools:context=".LogReg"
+        android:background="#EEEEEE"
+        android:padding="10dp">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Admin Home"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/Admin_home_label"
-            android:textSize="24dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="#FFFFFF"
+            android:id="@+id/admin_overview_alluser">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="#ffa500"
+                android:id="@+id/frameLayout12"></FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="All users"
+                android:id="@+id/admin_overview_alluser_label"
+                android:layout_below="@+id/frameLayout12"
+                android:layout_centerHorizontal="true"
+                android:textColor="#666666"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="117"
+                android:id="@+id/admin_overview_alluser_number"
+                android:layout_below="@+id/admin_overview_alluser_label"
+                android:textColor="#ffa500"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#FFFFFF"
+            android:id="@+id/admin_overview_students"
+            android:layout_below="@+id/admin_overview_alluser"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/bcg"
+                android:id="@+id/frameLayout13" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Students"
+                android:id="@+id/admin_overview_students_label"
+                android:layout_below="@+id/frameLayout13"
+                android:layout_centerHorizontal="true"
+                android:textColor="#666666"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="87"
+                android:id="@+id/admin_overview_students_number"
+                android:layout_below="@+id/admin_overview_students_label"
+                android:textColor="@color/bcg"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#FFFFFF"
+            android:id="@+id/admin_overview_companies"
+            android:layout_below="@+id/admin_overview_students"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/bcg_blue_norm"
+                android:id="@+id/frameLayout14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Companies"
+                android:id="@+id/admin_overview_companies_label"
+                android:layout_below="@+id/frameLayout14"
+                android:layout_centerHorizontal="true"
+                android:textColor="#666666"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="8"
+                android:id="@+id/admin_overview_companies_number"
+                android:layout_below="@+id/admin_overview_companies_label"
+                android:textColor="@color/bcg_blue_norm"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#FFFFFF"
+            android:id="@+id/admin_overview_jobs"
+            android:layout_below="@+id/admin_overview_companies"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/bcg_blue_hollow"
+                android:id="@+id/frameLayout15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Jobs posted"
+                android:id="@+id/admin_overview_jobs_label"
+                android:layout_below="@+id/frameLayout15"
+                android:layout_centerHorizontal="true"
+                android:textColor="#666666"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="2"
+                android:id="@+id/admin_overview_jobs_number"
+                android:layout_below="@+id/admin_overview_jobs_label"
+                android:textColor="@color/bcg_blue_hollow"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
     </RelativeLayout>
 </ScrollView>
