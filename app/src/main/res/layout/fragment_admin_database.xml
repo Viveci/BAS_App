@@ -40,8 +40,9 @@
                         android:text="Student"
                         android:id="@+id/admin_db_student"
                         android:layout_column="0"
-                        android:checked="true"
-                        android:buttonTint="@color/bcg" />
+                        android:checked="false"
+                        android:buttonTint="@color/bcg"
+                        />
 
                     <CheckBox
                         android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
                         android:text="Company"
                         android:id="@+id/admin_db_company"
                         android:layout_column="0"
-                        android:checked="true"
+                        android:checked="false"
                         android:buttonTint="@color/bcg_blue_norm" />
 
                     <CheckBox
@@ -58,8 +59,9 @@
                         android:text="Admin"
                         android:id="@+id/admin_db_admin"
                         android:layout_column="0"
-                        android:checked="true"
-                        android:buttonTint="@color/admin" />
+                        android:checked="false"
+                        android:buttonTint="@color/admin"
+                        android:clickable="false" />
                 </TableRow>
             </TableLayout>
 

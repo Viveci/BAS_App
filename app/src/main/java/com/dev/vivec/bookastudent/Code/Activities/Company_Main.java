@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.dev.vivec.bookastudent.Code.Fragments.Company_Home;
 import com.dev.vivec.bookastudent.Code.Fragments.Company_Notifications;
+import com.dev.vivec.bookastudent.Code.Fragments.Company_PostaJob;
 import com.dev.vivec.bookastudent.Code.Fragments.Company_Ratings;
 import com.dev.vivec.bookastudent.Code.Fragments.Company_Settings;
 import com.dev.vivec.bookastudent.Code.Fragments.Contact;
@@ -91,6 +92,12 @@ public class Company_Main extends AppCompatActivity {
                     case R.id.CHome:
                         Toast.makeText(getApplicationContext(), "Home selected", Toast.LENGTH_SHORT).show();
                         fragmentTransaction.replace(R.id.frame, new Company_Home());
+                        fragmentTransaction.commit();
+                        return true;
+
+                    case R.id.CPost:
+                        Toast.makeText(getApplicationContext(), "Post a job", Toast.LENGTH_SHORT).show();
+                        fragmentTransaction.replace(R.id.frame, new Company_PostaJob());
                         fragmentTransaction.commit();
                         return true;
 

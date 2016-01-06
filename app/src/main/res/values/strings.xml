@@ -56,8 +56,10 @@
     <string name="openDrawer">Navigation View Closed</string>
 
     <string name="comp_home">Home</string>
-    <string name="comp_Jobs">Posted jobs</string>
+    <string name="comp_Jobs">My jobs</string>
     <string name="comp_Ratings">Ratings</string>
+    <string name="comp_post">Post a job</string>
+
 
     <string name="admin_home">Overview</string>
     <string name="admin_db">Database</string>

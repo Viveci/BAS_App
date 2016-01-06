@@ -5,20 +5,304 @@
     >
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LogReg"
-        android:background="#FFFFFF">
+        android:layout_height="match_parent"
+        tools:context=".LogReg"
+        android:background="#EEEEEE"
+        android:padding="10dp">
 
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Company Home"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/Company_home_label"
-            android:textSize="24dp" />
+            android:background="#FFFFFF"
+            android:id="@+id/comp_home_header"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/comp_home_img"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:src="@drawable/google"
+                app:border_color="#FF000000"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout16"
+                android:background="#AAAAAA"
+                android:layout_below="@+id/comp_home_compname"
+                android:layout_alignStart="@+id/comp_home_compname" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Company name"
+                android:id="@+id/comp_home_fullname"
+                android:textColor="#555555"
+                android:layout_below="@+id/comp_home_img"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Dummy company"
+                android:id="@+id/comp_home_compname"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:layout_below="@+id/comp_home_fullname"
+                android:layout_alignStart="@+id/comp_home_fullname" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="CVR Number"
+                android:id="@+id/comp_home_cvrnum"
+                android:textColor="#555555"
+                android:layout_alignTop="@+id/frameLayout16"
+                android:layout_alignStart="@+id/frameLayout16"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="122345-5678"
+                android:id="@+id/comp_home_cvr"
+                android:textColor="#333333"
+                android:layout_below="@+id/comp_home_cvrnum"
+                android:layout_alignStart="@+id/frameLayout17" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout17"
+                android:background="#AAAAAA"
+                android:layout_below="@+id/comp_home_cvr"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/comp_home_address"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_below="@+id/comp_home_header"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout18"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/comp_address_address_text"
+                android:layout_alignStart="@+id/comp_address_address_text" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout19"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/comp_address_address_ziptext"
+                android:layout_alignStart="@+id/comp_address_address_ziptext" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Address"
+                android:id="@+id/comp_address_label"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Chr M Østergaards Vej 4A"
+                android:id="@+id/comp_address_address_text"
+                android:layout_below="@+id/comp_address_address"
+                android:layout_alignStart="@+id/comp_address_address"
+                android:layout_alignParentEnd="true"
+                android:textColor="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Address"
+                android:id="@+id/comp_address_address"
+                android:layout_below="@+id/comp_address_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="ZIP code"
+                android:id="@+id/comp_address_address_zip"
+                android:layout_below="@+id/comp_address_address_text"
+                android:layout_alignStart="@+id/comp_address_address_text"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="8700"
+                android:id="@+id/comp_address_address_ziptext"
+                android:layout_below="@+id/comp_address_address_zip"
+                android:layout_alignStart="@+id/comp_address_address_zip"
+                android:textColor="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="City"
+                android:id="@+id/comp_address_address_city"
+                android:layout_below="@+id/frameLayout19"
+                android:layout_alignStart="@+id/frameLayout19"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Horsens"
+                android:id="@+id/comp_address_address_citytext"
+                android:layout_below="@+id/comp_address_address_city"
+                android:layout_alignStart="@+id/comp_address_address_city"
+                android:textColor="#333333" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout20"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/comp_address_address_citytext"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/comp_home_about"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_below="@+id/comp_home_address"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout21"
+                android:background="#AAAAAA"
+                android:layout_below="@+id/comp_home_about_text"
+                android:layout_alignStart="@+id/comp_home_about_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="About the company"
+                android:id="@+id/comp_home_about_label"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Lorem ipsum dolor sit amet, sint minimum maiestatis nec et, laudem omittam perfecto ex nec. Eam cu liber invidunt, sint torquatos et est, eos simul docendi recteque ea. Eum ei novum percipit, ne mei tale tritani inimicus. Libris indoctum eu vix. Ad quo fierent senserit aliquando. No mel brute euripidis splendide, inani prompta commune et est, omnesque accusata adipiscing cu sed."
+                android:id="@+id/comp_home_about_text"
+                android:layout_below="@+id/comp_home_about_about"
+                android:layout_alignStart="@+id/comp_home_about_about"
+                android:layout_alignParentEnd="true"
+                android:textColor="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="About"
+                android:id="@+id/comp_home_about_about"
+                android:layout_below="@+id/comp_home_about_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout2"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_below="@+id/comp_home_about"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout22"
+                android:background="#AAAAAA"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/comp_home_card_list" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Card details"
+                android:id="@+id/comp_home_card_label"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Cards"
+                android:id="@+id/comp_home_card_list_label"
+                android:layout_below="@+id/comp_home_card_label"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:textColor="#555555" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/comp_home_card_list"
+                android:layout_below="@+id/comp_home_card_list_label"
+                android:layout_alignParentStart="true"
+                android:choiceMode="singleChoice" />
+        </RelativeLayout>
+
     </RelativeLayout>
 </ScrollView>

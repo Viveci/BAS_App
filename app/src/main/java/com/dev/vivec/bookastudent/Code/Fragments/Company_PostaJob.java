@@ -10,13 +10,14 @@ import android.view.ViewGroup;
 import com.dev.vivec.bookastudent.R;
 
 /**
- * Created by user on 12/31/2015.
+ * Created by user on 1/6/2016.
  */
-public class Company_Home extends Fragment {
+public class Company_PostaJob extends Fragment {
+
 
     private Toolbar toolbar;
 
-    public Company_Home(){};
+    public Company_PostaJob(){};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +26,12 @@ public class Company_Home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View x = inflater.inflate(R.layout.fragment_company_home, container, false);
-
+        View x = inflater.inflate(R.layout.fragment_company_postajob, container, false);
         //Do stuff here
+
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
-        toolbar.setTitle("Profile");
+        toolbar.setTitle("Post a jobs");
+
 
 
         return x;
