@@ -10,16 +10,16 @@
             android:title="@string/comp_home" />
 
         <item
-            android:id="@+id/CPost"
-            android:checked="false"
-            android:icon="@drawable/ic_myjobs_black"
-            android:title="@string/comp_post" />
-
-        <item
             android:id="@+id/CJobs"
             android:checked="false"
             android:icon="@drawable/ic_jobs"
             android:title="@string/comp_Jobs" />
+
+        <item
+            android:id="@+id/CPost"
+            android:checked="false"
+            android:icon="@drawable/ic_myjobs_black"
+            android:title="@string/comp_post" />
 
         <item
             android:id="@+id/CRatings"

@@ -2,6 +2,7 @@ package com.dev.vivec.bookastudent.Code.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,8 @@ public class ADatabase extends Fragment {
     private ArrayList<User> users;
     private ArrayList<User> filter;
 
+    private Toolbar toolbar;
+
     public ADatabase(){};
 
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,10 @@ public class ADatabase extends Fragment {
         View x = inflater.inflate(R.layout.fragment_admin_database, container, false);
 
         //Do stuff here
+
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+        toolbar.setTitle("Database");
+
 
         student = (CheckBox) x.findViewById(R.id.admin_db_student);
         student.setChecked(false);

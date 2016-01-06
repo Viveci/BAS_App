@@ -61,7 +61,8 @@
                         android:layout_column="0"
                         android:checked="false"
                         android:buttonTint="@color/admin"
-                        android:clickable="false" />
+                        />
+
                 </TableRow>
             </TableLayout>
 

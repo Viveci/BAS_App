@@ -55,7 +55,7 @@
     <string name="closeDrawer">Navigation View</string>
     <string name="openDrawer">Navigation View Closed</string>
 
-    <string name="comp_home">Home</string>
+    <string name="comp_home">Profile</string>
     <string name="comp_Jobs">My jobs</string>
     <string name="comp_Ratings">Ratings</string>
     <string name="comp_post">Post a job</string>
@@ -65,6 +65,11 @@
     <string name="admin_db">Database</string>
     <string name="admin_notifications">Notifications</string>
     <string name="admin_settings">Settings</string>
+
+    <string-array name="payment">
+        <item>Pay per assignment</item>
+        <item>Hourly payment</item>
+    </string-array>
 
 
 
