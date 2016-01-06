@@ -30,5 +30,7 @@
     <color name="instagram_norm">#517fa4</color>
     <color name="link_norm">#007bb6</color>
 
+    <color name="bcg_gray_foc">#AAAAAA</color>
+    <color name="bcg_gray_norm">#DDDDDD</color>
 
 </resources>

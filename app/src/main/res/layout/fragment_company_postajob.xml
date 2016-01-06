@@ -34,7 +34,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="..."
                 android:id="@+id/textViewcomp_paj_name_text"
                 android:singleLine="true"
                 android:textColor="#333333"
@@ -69,7 +68,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="..."
                 android:id="@+id/comp_paj_about_text"
                 android:singleLine="true"
                 android:textColor="#333333"
@@ -147,9 +145,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/comp_paj_details_spiner"
-                android:spinnerMode="dropdown"
+                android:spinnerMode="dialog"
                 android:layout_below="@+id/comp_paj_details_paymentype"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -177,13 +176,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="..."
                 android:id="@+id/comp_paj_detials_start_text"
                 android:singleLine="true"
                 android:textColor="#333333"
                 android:layout_below="@+id/comp_paj_details_start"
                 android:layout_alignStart="@+id/comp_paj_details_start"
-                android:layout_alignEnd="@+id/comp_paj_details_spiner" />
+                android:layout_alignParentEnd="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -200,7 +198,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="..."
                 android:id="@+id/comp_paj_details_end_text"
                 android:singleLine="true"
                 android:textColor="#333333"
@@ -223,7 +220,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="..."
                 android:id="@+id/comp_paj_detials_deadline_text"
                 android:singleLine="true"
                 android:textColor="#333333"
@@ -246,7 +242,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="..."
                 android:id="@+id/comp_paj_details_ammount_text"
                 android:singleLine="true"
                 android:textColor="#333333"
@@ -269,7 +264,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="..."
                 android:id="@+id/comp_paj_details_number_text"
                 android:singleLine="true"
                 android:textColor="#333333"
@@ -279,13 +273,49 @@
                 android:layout_marginTop="10dp" />
         </RelativeLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/comp_paj_details"
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
-            android:background="#FFFFFF"></TableRow>
+            android:background="#EEEEEE"
+            android:id="@+id/comp_paj_buttons">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post a job"
+                android:id="@+id/comp_paj_post"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/frameLayout23"
+                android:background="@drawable/button_shape"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draft"
+                android:id="@+id/comp_paj_buttons_draft"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/frameLayout23"
+                android:textStyle="bold"
+                android:textColor="@color/bcg"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_shape_gery" />
+
+            <FrameLayout
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/frameLayout23"></FrameLayout>
+        </RelativeLayout>
+
 
     </RelativeLayout>
 </ScrollView>
