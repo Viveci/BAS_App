@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -23,9 +24,9 @@ import java.util.ArrayList;
  */
 public class ADatabase extends Fragment {
 
-    private RadioButton student;
-    private RadioButton company;
-    private RadioButton admin;
+    private CheckBox student;
+    private CheckBox company;
+    private CheckBox admin;
 
     private ImageButton button;
     private EditText search;
@@ -34,6 +35,7 @@ public class ADatabase extends Fragment {
 
     private UserDBListAdapter adpater;
     private ArrayList<User> users;
+    private ArrayList<User> filter;
 
     public ADatabase(){};
 
@@ -48,11 +50,11 @@ public class ADatabase extends Fragment {
 
         //Do stuff here
 
-        student = (RadioButton) x.findViewById(R.id.admin_db_student);
+        student = (CheckBox) x.findViewById(R.id.admin_db_student);
         student.setChecked(false);
-        company = (RadioButton) x.findViewById(R.id.admin_db_company);
+        company = (CheckBox) x.findViewById(R.id.admin_db_company);
         company.setChecked(false);
-        admin = (RadioButton) x.findViewById(R.id.admin_db_admin);
+        admin = (CheckBox) x.findViewById(R.id.admin_db_admin);
         admin.setChecked(false);
 
         button = (ImageButton) x.findViewById(R.id.admin_db_search);
@@ -78,42 +80,61 @@ public class ADatabase extends Fragment {
         student.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                ArrayList<User> nlist = new ArrayList<>();
-                for (User u : users) {
-                    if (u.getRole().equals("student")) {
-                        nlist.add(u);
+                if(isChecked){
+                    ArrayList<User> nlist = new ArrayList<>();
+                    for (User u : users) {
+                        if (u.getRole().equals("student")) {
+                            nlist.add(u);
+                        }
                     }
+                    adpater = new UserDBListAdapter(getActivity().getApplicationContext(), nlist);
+                    list.setAdapter(adpater);
                 }
-                adpater = new UserDBListAdapter(getActivity().getApplicationContext(), nlist);
-                list.setAdapter(adpater);
+                else{
+                    adpater = new UserDBListAdapter(getActivity().getApplicationContext(),users);
+                    list.setAdapter(adpater);
+                }
             }
         });
 
         company.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                ArrayList<User> nlist = new ArrayList<>();
-                for(User u : users){
-                    if(u.getRole().equals("company")){
-                        nlist.add(u);
+                if(isChecked){
+                    ArrayList<User> nlist = new ArrayList<>();
+                    for (User u : users) {
+                        if (u.getRole().equals("company")) {
+                            nlist.add(u);
+                        }
                     }
+                    adpater = new UserDBListAdapter(getActivity().getApplicationContext(), nlist);
+                    list.setAdapter(adpater);
                 }
-                adpater = new UserDBListAdapter(getActivity().getApplicationContext(),nlist);
-                list.setAdapter(adpater);
+                else{
+                    adpater = new UserDBListAdapter(getActivity().getApplicationContext(),users);
+                    list.setAdapter(adpater);
+                }
             }
         });
 
         admin.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                ArrayList<User> nlist = new ArrayList<>();
-                for (User u : users) {
-                    if (u.getRole().equals("admin")) {
-                        nlist.add(u);
+                if(isChecked){
+                    ArrayList<User> nlist = new ArrayList<>();
+                    for (User u : users) {
+                        if (u.getRole().equals("admin")) {
+                            nlist.add(u);
+                        }
                     }
+                    adpater = new UserDBListAdapter(getActivity().getApplicationContext(), nlist);
+                    list.setAdapter(adpater);
                 }
-                adpater = new UserDBListAdapter(getActivity().getApplicationContext(), nlist);
-                list.setAdapter(adpater);
+                else{
+                    adpater = new UserDBListAdapter(getActivity().getApplicationContext(),users);
+                    list.setAdapter(adpater);
+                }
+
             }
         });
 

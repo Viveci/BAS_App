@@ -34,31 +34,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Student"
                         android:id="@+id/admin_db_student"
                         android:layout_column="0"
-                        android:checked="false"
+                        android:checked="true"
                         android:buttonTint="@color/bcg" />
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Company"
                         android:id="@+id/admin_db_company"
                         android:layout_column="0"
-                        android:checked="false"
+                        android:checked="true"
                         android:buttonTint="@color/bcg_blue_norm" />
 
-                    <RadioButton
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Admin"
                         android:id="@+id/admin_db_admin"
                         android:layout_column="0"
-                        android:checked="false"
+                        android:checked="true"
                         android:buttonTint="@color/admin" />
                 </TableRow>
             </TableLayout>
