@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 
@@ -21,6 +22,9 @@ public class Company_PostaJob extends Fragment {
     private Toolbar toolbar;
     private Spinner spinner;
 
+    private Button post;
+    private Button draft;
+
     public Company_PostaJob(){};
 
     public void onCreate(Bundle savedInstanceState) {
@@ -33,8 +37,6 @@ public class Company_PostaJob extends Fragment {
         View x = inflater.inflate(R.layout.fragment_company_postajob, container, false);
         //Do stuff here
 
-        String[] dropdown = {"Horuly","Pay per assignment"};
-
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("Post a jobs");
 
@@ -43,6 +45,11 @@ public class Company_PostaJob extends Fragment {
                 R.array.payment, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        post = (Button) x.findViewById(R.id.comp_paj_post);
+        draft = (Button) x.findViewById(R.id.comp_paj_buttons_draft);
+
+        
 
         return x;
     }
