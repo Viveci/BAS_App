@@ -4,13 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import com.dev.vivec.bookastudent.R;
 
@@ -48,7 +45,6 @@ public class SplashScreen extends Activity{
                 R.anim.move_fade);
 
         animFadein.setAnimationListener(new Anim());
-        //Fadein anim
         animFadein.setFillAfter(true);
         logo.startAnimation(animFadein);
 
@@ -69,5 +65,6 @@ public class SplashScreen extends Activity{
 
     public void onPause(){
         super.onPause();
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }
 }

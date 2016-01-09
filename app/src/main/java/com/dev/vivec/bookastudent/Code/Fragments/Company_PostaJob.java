@@ -4,14 +4,21 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.SimpleAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.dev.vivec.bookastudent.Code.Adapters.SkillsListAdapter;
+import com.dev.vivec.bookastudent.Code.Model.SkillsKeys;
 import com.dev.vivec.bookastudent.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by user on 1/6/2016.
@@ -21,6 +28,7 @@ public class Company_PostaJob extends Fragment {
 
     private Toolbar toolbar;
     private Spinner spinner;
+    private ListView skills;
 
     private Button post;
     private Button draft;
@@ -40,16 +48,53 @@ public class Company_PostaJob extends Fragment {
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("Post a jobs");
 
+        skills = (ListView) x.findViewById(R.id.comp_paj_skills_list);
+
+        ArrayList<SkillsKeys> skillslist = new ArrayList<>();
+        skillslist.add(new SkillsKeys("Programing"));
+        skillslist.add(new SkillsKeys("Video editing"));
+        skillslist.add(new SkillsKeys("Sound editing"));
+        skillslist.add(new SkillsKeys("Book a student"));
+
+        SkillsListAdapter adapter = new SkillsListAdapter(getActivity().getApplicationContext(),skillslist);
+        skills.setAdapter(adapter);
+        skills.setOnTouchListener(new View.OnTouchListener() {
+            // Setting on Touch Listener for handling the touch inside ScrollView
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
+
+        //Spinner
         spinner = (Spinner) x.findViewById(R.id.comp_paj_details_spiner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(),
-                R.array.payment, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        String[] objects = { "Payed per assignment","Hourly payment" };
+        ArrayAdapter sadapter = new ArrayAdapter(
+                getActivity().getApplicationContext(),android.R.layout.simple_list_item_1 ,objects);
+        spinner.setAdapter(sadapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView parent, View view, int pos,
+                                       long id) {
+                spinner.setSelection(pos);
+                Toast.makeText(getActivity().getApplicationContext(),
+                        spinner.getItemAtPosition(pos).toString(), Toast.LENGTH_LONG)
+                        .show();
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         post = (Button) x.findViewById(R.id.comp_paj_post);
         draft = (Button) x.findViewById(R.id.comp_paj_buttons_draft);
 
-        
+
 
         return x;
     }

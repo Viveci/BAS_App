@@ -82,19 +82,19 @@
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
             android:padding="10dp"
-            android:id="@+id/comp_paj_skills"
+            android:id="@+id/comp_paj_skill"
             android:layout_below="@+id/comp_paj_about"
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp">
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:id="@+id/listView"
+                android:layout_height="150dp"
+                android:id="@+id/comp_paj_skills_list"
+                android:choiceMode="singleChoice"
                 android:layout_below="@+id/comp_paj_skills_label"
-                android:layout_alignStart="@+id/comp_paj_skills_label"
-                android:layout_marginTop="10dp"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -111,20 +111,21 @@
                 android:layout_height="wrap_content"
                 android:text="Add skills or keyword"
                 android:id="@+id/button2"
-                android:layout_below="@+id/listView"
                 android:background="@drawable/button_shpe_blue"
-                android:layout_alignEnd="@+id/listView"
-                android:layout_alignStart="@+id/listView"
                 android:textColor="#EEEEEE"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp" />
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/comp_paj_skills_list"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/comp_paj_skills"
+            android:layout_below="@+id/comp_paj_skill"
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
             android:background="#FFFFFF"
@@ -143,9 +144,9 @@
 
             <Spinner
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:id="@+id/comp_paj_details_spiner"
-                android:spinnerMode="dialog"
+                android:spinnerMode="dropdown"
                 android:layout_below="@+id/comp_paj_details_paymentype"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true" />

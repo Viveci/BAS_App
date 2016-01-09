@@ -335,12 +335,13 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:id="@+id/profile_skillskeys_list"
                 android:layout_below="@+id/profile_skillskeys_text"
                 android:layout_alignStart="@+id/profile_skillskeys_text"
                 android:layout_marginTop="10dp"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:choiceMode="singleChoice" />
 
             <Button
                 android:layout_width="wrap_content"
