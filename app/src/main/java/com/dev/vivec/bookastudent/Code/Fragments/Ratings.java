@@ -87,6 +87,10 @@ public class Ratings extends Fragment {
         ratings.add(four);
         ratings.add(five);
         ratings.add(two);
+        ratings.add(three);
+        ratings.add(four);
+        ratings.add(five);
+        ratings.add(two);
 
         CompRatingListAdapter adapter = new CompRatingListAdapter(this.getActivity().getApplicationContext(),ratings);
 

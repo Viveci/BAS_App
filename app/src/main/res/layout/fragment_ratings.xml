@@ -77,7 +77,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/ratings_myrating"
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
@@ -105,7 +105,7 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:id="@+id/ratings_myratings_list"
                 android:layout_below="@+id/frameLayout7"
                 android:layout_alignStart="@+id/frameLayout7"

@@ -292,25 +292,12 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:id="@+id/profile_edu_list"
                 android:layout_below="@+id/profile_Edu_Label"
                 android:layout_alignStart="@+id/profile_Edu_Label"
-                android:layout_marginTop="15dp" />
+                android:layout_marginTop="10dp" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add university"
-                android:id="@+id/profile_edu_newedu"
-                android:layout_below="@+id/profile_edu_list"
-                android:layout_alignStart="@+id/profile_edu_list"
-                android:layout_marginTop="10dp"
-                android:layout_alignEnd="@+id/profile_edu_list"
-                android:background="@drawable/button_shpe_blue"
-                android:textStyle="bold"
-                android:textColor="#EEEEEE"
-                android:textSize="18dp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -321,7 +308,8 @@
             android:layout_below="@+id/profile_edu"
             android:layout_alignStart="@+id/profile_edu"
             android:padding="10dp"
-            android:id="@+id/profile_skillskeys_box">
+            android:id="@+id/profile_skillskeys_box"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -335,7 +323,7 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_height="120dp"
                 android:id="@+id/profile_skillskeys_list"
                 android:layout_below="@+id/profile_skillskeys_text"
                 android:layout_alignStart="@+id/profile_skillskeys_text"
@@ -343,20 +331,61 @@
                 android:layout_alignParentEnd="true"
                 android:choiceMode="singleChoice" />
 
-            <Button
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="#FFFFFF"
+            android:layout_below="@+id/profile_skillskeys_box"
+            android:layout_alignStart="@+id/profile_skillskeys_box"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/profile_carboxes"
+            android:padding="10dp">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add skills or keyword"
-                android:id="@+id/button"
-                android:layout_below="@+id/profile_skillskeys_list"
-                android:background="@drawable/button_shpe_blue"
-                android:layout_alignEnd="@+id/profile_skillskeys_list"
-                android:layout_alignStart="@+id/profile_skillskeys_list"
-                android:textColor="#EEEEEE"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Travelling details"
+                android:id="@+id/profile_car_label"
+                android:textColor="#000000"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
 
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you have a driving license?"
+                android:id="@+id/profile_car_license"
+                android:layout_below="@+id/profile_car_label"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:buttonTint="@color/bcg" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you have a car?"
+                android:id="@+id/profile_car_car"
+                android:checked="false"
+                android:buttonTint="@color/bcg"
+                android:layout_below="@+id/profile_car_license"
+                android:layout_alignStart="@+id/profile_car_license" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Can you carpool"
+                android:id="@+id/profile_car_carpool"
+                android:checked="false"
+                android:layout_below="@+id/profile_car_car"
+                android:layout_alignStart="@+id/profile_car_car"
+                android:layout_alignEnd="@+id/profile_car_car"
+                android:buttonTint="@color/bcg" />
         </RelativeLayout>
 
     </RelativeLayout>

@@ -15,7 +15,9 @@ import android.view.View;
         import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.dev.vivec.bookastudent.Code.Adapters.EducationListAdapter;
 import com.dev.vivec.bookastudent.Code.Adapters.SkillsListAdapter;
+import com.dev.vivec.bookastudent.Code.Model.Education;
 import com.dev.vivec.bookastudent.Code.Model.SkillsKeys;
 import com.dev.vivec.bookastudent.R;
 
@@ -26,6 +28,7 @@ public class Home extends android.support.v4.app.Fragment{
 
     private Toolbar toolbar;
     private ListView skills;
+    private ListView edu;
 
     public Home(){}
 
@@ -45,10 +48,35 @@ public class Home extends android.support.v4.app.Fragment{
         skillslist.add(new SkillsKeys("Video editing"));
         skillslist.add(new SkillsKeys("Sound editing"));
         skillslist.add(new SkillsKeys("Book a student"));
+        skillslist.add(new SkillsKeys("Programing"));
+        skillslist.add(new SkillsKeys("Video editing"));
+        skillslist.add(new SkillsKeys("Sound editing"));
+        skillslist.add(new SkillsKeys("Book a student"));
 
         SkillsListAdapter adapter = new SkillsListAdapter(getActivity().getApplicationContext(),skillslist);
         skills.setAdapter(adapter);
         skills.setOnTouchListener(new View.OnTouchListener() {
+            // Setting on Touch Listener for handling the touch inside ScrollView
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
+
+        edu = (ListView) rootView.findViewById(R.id.profile_edu_list);
+
+        ArrayList<Education> eduList = new ArrayList<>();
+        eduList.add(new Education("Via"));
+        eduList.add(new Education("Bme"));
+        eduList.add(new Education("DTK"));
+        eduList.add(new Education("Via"));
+        eduList.add(new Education("Bme"));
+        eduList.add(new Education("DTK"));
+
+        EducationListAdapter eduAdapter = new EducationListAdapter((getActivity().getApplicationContext()),eduList);
+        edu.setAdapter(eduAdapter);
+        edu.setOnTouchListener(new View.OnTouchListener() {
             // Setting on Touch Listener for handling the touch inside ScrollView
             @Override
             public boolean onTouch(View v, MotionEvent event) {

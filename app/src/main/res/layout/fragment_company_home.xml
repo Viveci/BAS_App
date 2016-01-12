@@ -297,7 +297,7 @@
 
             <ListView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:id="@+id/comp_home_card_list"
                 android:layout_below="@+id/comp_home_card_list_label"
                 android:layout_alignParentStart="true"
