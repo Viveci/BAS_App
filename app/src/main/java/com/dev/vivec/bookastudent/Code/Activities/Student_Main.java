@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dev.vivec.bookastudent.Code.Fragments.Contact;
@@ -52,6 +53,11 @@ public class Student_Main extends AppCompatActivity {
 
             //Initializing NavigationView
             navigationView = (NavigationView) findViewById(R.id.navigation_view);
+
+            //Inflating the header
+            View header = navigationView.inflateHeaderView(R.layout.header);
+            TextView text = (TextView) header.findViewById(R.id.header_username);
+            text.setText("Márton Tepericss");
 
             //Default fragment
             fragmentTransaction.replace(R.id.frame, new Home());

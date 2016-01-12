@@ -30,7 +30,6 @@
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
         android:layout_gravity="start"
-        app:headerLayout="@layout/header_company"
         app:menu="@menu/drawer_company"
         app:itemIconTint="@color/drawer_selector_comp"
         app:itemTextColor="@color/drawer_selector_comp"

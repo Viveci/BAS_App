@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dev.vivec.bookastudent.Code.Fragments.Company_Home;
@@ -55,6 +56,11 @@ public class Company_Main extends AppCompatActivity {
 
         //Initializing NavigationView
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
+
+        //Inflating the header
+        View header = navigationView.inflateHeaderView(R.layout.header_company);
+        TextView text = (TextView) header.findViewById(R.id.header_username);
+        text.setText("Márton Tepericss");
 
         //Default fragment
         fragmentTransaction.replace(R.id.frame, new Company_Home());
