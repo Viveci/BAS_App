@@ -58,38 +58,6 @@ public class Log extends AppCompatActivity {
             });
 
         }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-            getMenuInflater().inflate(R.menu.menu_log_reg, menu);
-            return true;
-        }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-            int id = item.getItemId();
-
-            if (id == R.id.action_settings) {
-                return true;
-            }
-
-            switch (item.getItemId()) {
-                case android.R.id.home:
-                    Intent upIntent = new Intent(this, LogReg.class);
-                    if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
-                        TaskStackBuilder
-                                .from(this)
-                                .addNextIntent(new Intent(this, LogReg.class))
-                                .addNextIntent(upIntent).startActivities();
-                        finish();
-                    } else {
-                        NavUtils.navigateUpTo(this, upIntent);
-                        overridePendingTransition(R.anim.move_destroy_left, R.anim.move_destroy_right);
-                    }
-                    return true;
-            }
-
-            return super.onOptionsItemSelected(item);
-        }
 
     public void onBackPressed(){
         super.onBackPressed();

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,10 @@ public class Student_Main extends AppCompatActivity {
         private DrawerLayout drawerLayout;
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
+        private String name;
+        private String email;
+        private String CPR;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -44,11 +49,25 @@ public class Student_Main extends AppCompatActivity {
             toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
+            name = "Default";
+            email = "default@default.com";
+
             //Fetching extras
             Bundle extras = getIntent().getExtras();
             if(extras != null){
-                toolBarColor = extras.getInt("COLOR");
-                toolbar.setBackgroundColor(toolBarColor);
+                if(extras.getInt("COLOR") != 0) {
+                    toolBarColor = extras.getInt("COLOR");
+                    toolbar.setBackgroundColor(toolBarColor);
+                }
+                if(!extras.getString("EMAIL").isEmpty()){
+                    email = extras.getString("EMAIL");
+                }
+                if(!extras.getString("NAME").isEmpty()){
+                    name = extras.getString("NAME");
+                }
+                if(!extras.getString("CPR").isEmpty()){
+                    CPR = extras.getString("CPR");
+                }
             }
 
             //Initializing NavigationView
@@ -56,8 +75,14 @@ public class Student_Main extends AppCompatActivity {
 
             //Inflating the header
             View header = navigationView.inflateHeaderView(R.layout.header);
-            TextView text = (TextView) header.findViewById(R.id.header_username);
-            text.setText("Márton Tepericss");
+            TextView textN = (TextView) header.findViewById(R.id.header_username);
+            TextView textE = (TextView) header.findViewById(R.id.header_email);
+            ImageView img = (ImageView) header.findViewById(R.id.header_img);
+            if(!name.equals("Default")) {
+                textN.setText(name);
+                textE.setText(email);
+                img.setImageResource(R.drawable.ic_account_circle_white_48dp);
+            }
 
             //Default fragment
             fragmentTransaction.replace(R.id.frame, new Home());
@@ -69,7 +94,6 @@ public class Student_Main extends AppCompatActivity {
                 // This method will trigger on item Click of navigation menu
                 @Override
                 public boolean onNavigationItemSelected(MenuItem menuItem) {
-
 
                     //Checking if the item is in checked state or not, if not make it in checked state
                     if (menuItem.isChecked()) menuItem.setChecked(false);
@@ -94,7 +118,14 @@ public class Student_Main extends AppCompatActivity {
                         //Replacing the main content with HomeFragment Which is our Inbox View;
                         case R.id.Home:
                             Toast.makeText(getApplicationContext(), "Home selected", Toast.LENGTH_SHORT).show();
-                            fragmentTransaction.replace(R.id.frame, new Home());
+
+                            //DAfuq here
+                            Home h = new Home();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("NAME", name);
+                            h.setArguments(bundle);
+
+                            fragmentTransaction.replace(R.id.frame, h);
                             fragmentTransaction.commit();
                             return true;
 

@@ -14,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
         import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.dev.vivec.bookastudent.Code.Adapters.EducationListAdapter;
 import com.dev.vivec.bookastudent.Code.Adapters.SkillsListAdapter;
@@ -30,6 +31,9 @@ public class Home extends android.support.v4.app.Fragment{
     private ListView skills;
     private ListView edu;
 
+    private TextView name;
+    private String nameT;
+
     public Home(){}
 
     @Override
@@ -41,6 +45,21 @@ public class Home extends android.support.v4.app.Fragment{
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
         toolbar.setTitle("Profile");
 
+        nameT = "Default";
+
+        //Connecting TextViews
+        name = (TextView) rootView.findViewById(R.id.profile_userName);
+
+        //Fetching Bundle
+        if(this.getArguments()!=null) {
+            Bundle bundle = this.getArguments();
+            String nameT = bundle.getString("NAME");
+        }
+        //Filling up TextViews
+        name.setText(nameT);
+
+
+        //ListViews
         skills = (ListView) rootView.findViewById(R.id.profile_skillskeys_list);
 
         ArrayList<SkillsKeys> skillslist = new ArrayList<>();

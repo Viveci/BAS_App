@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,12 +37,20 @@ public class Company_Main extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+
+    private String name;
+    private String email;
+    private String CVR;
+
     android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_main);
+
+        name = "Default";
+        email = "default@default.com";
 
         // Initializing Toolbar and setting it as the actionbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -52,6 +61,15 @@ public class Company_Main extends AppCompatActivity {
         if(extras != null){
             toolBarColor = extras.getInt("COLOR");
             toolbar.setBackgroundColor(toolBarColor);
+            if(!extras.getString("EMAIL").isEmpty()){
+                email = extras.getString("EMAIL");
+            }
+            if(!extras.getString("NAME").isEmpty()){
+                name = extras.getString("NAME");
+            }
+            if(!extras.getString("CVR").isEmpty()){
+                CVR = extras.getString("CPR");
+            }
         }
 
         //Initializing NavigationView
@@ -59,8 +77,15 @@ public class Company_Main extends AppCompatActivity {
 
         //Inflating the header
         View header = navigationView.inflateHeaderView(R.layout.header_company);
-        TextView text = (TextView) header.findViewById(R.id.header_username);
-        text.setText("Márton Tepericss");
+        TextView textN = (TextView) header.findViewById(R.id.header_username);
+        TextView textE = (TextView) header.findViewById(R.id.header_email);
+        ImageView img = (ImageView) header.findViewById(R.id.header_img);
+        if(!name.equals("Default")) {
+            textN.setText(name);
+            textE.setText(email);
+            img.setImageResource(R.drawable.ic_account_circle_white_48dp);
+        }
+
 
         //Default fragment
         fragmentTransaction.replace(R.id.frame, new Company_Home());
