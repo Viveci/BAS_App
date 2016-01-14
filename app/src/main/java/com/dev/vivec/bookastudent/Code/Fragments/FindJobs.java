@@ -2,15 +2,19 @@ package com.dev.vivec.bookastudent.Code.Fragments;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.dev.vivec.bookastudent.Code.Activities.JobView;
 import com.dev.vivec.bookastudent.Code.Adapters.CompListAdapter;
 import com.dev.vivec.bookastudent.Code.Model.CompanyItem;
 import com.dev.vivec.bookastudent.R;
@@ -102,6 +106,21 @@ public class FindJobs extends android.support.v4.app.Fragment {
 
                     list.setAdapter(adapter);
                 }
+            }
+        });
+
+        list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity(),position,Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getActivity().getApplicationContext(), JobView.class);
+                startActivity(i);
+                getActivity().overridePendingTransition(R.anim.move_right, R.anim.move_left);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
 

@@ -1,5 +1,6 @@
 package com.dev.vivec.bookastudent.Code.Fragments;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,11 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.dev.vivec.bookastudent.Code.Activities.JobView;
 import com.dev.vivec.bookastudent.Code.Adapters.StudentRatingListAdatper;
 import com.dev.vivec.bookastudent.Code.Model.StudentRating;
 import com.dev.vivec.bookastudent.R;
@@ -93,6 +97,21 @@ public class Company_Ratings extends Fragment {
         list = (ListView) x.findViewById(R.id.comp_ratings_myratings_list);
         adapter = new StudentRatingListAdatper(getActivity().getApplicationContext(),ratings);
         list.setAdapter(adapter);
+
+        list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity().getApplicationContext(), position, Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getActivity(), JobView.class);
+                startActivity(i);
+                getActivity().overridePendingTransition(R.anim.move_right, R.anim.move_left);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         return x;
     }

@@ -1,0 +1,222 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LogReg"
+        android:background="#EEEEEE"
+        android:id="@+id/job_background">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/job_header"
+            android:background="@drawable/mac"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="#666666">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/job_logo"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/face" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Book a Student"
+                android:id="@+id/job_comp_name"
+                android:layout_alignTop="@+id/job_logo"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/job_logo"
+                android:layout_marginRight="25dp"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Temporary Job Agency "
+                android:id="@+id/job_comp_desc"
+                android:layout_alignBottom="@+id/job_logo"
+                android:layout_alignStart="@+id/job_comp_name"
+                android:layout_below="@+id/job_comp_name"
+                android:textSize="14dp"
+                android:layout_alignEnd="@+id/job_comp_name"
+                android:textColor="#AAAAAA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Inside Sales Representative"
+                android:id="@+id/job_job"
+                android:layout_alignStart="@+id/job_logo"
+                android:layout_alignEnd="@+id/job_comp_desc"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/job_logo"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Status:"
+                android:id="@+id/job_status_label"
+                android:layout_below="@+id/job_job"
+                android:layout_alignStart="@+id/job_job"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Available"
+                android:id="@+id/job_status"
+                android:layout_alignTop="@+id/job_status_label"
+                android:layout_toEndOf="@+id/job_status_label"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/bcg_hollow" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Book"
+                android:id="@+id/job_book"
+                android:background="@drawable/button_shape"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/job_status_label"
+                android:layout_alignStart="@+id/job_status_label"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/job_header"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:id="@+id/relativeLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="About the job"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#666666"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, labores splendide constituam ut mea, harum civibus et nam, no ius soleat adipisci. Eu nam stet nibh populo, usu probatus splendide ut. Cum in praesent reprehendunt. Placerat interesset signiferumque his te, ei nisl viris percipitur pri. Cu noster efficiendi appellantur vis. Id usu altera eleifend.  Modus debet laoreet pri ex, te est omnium referrentur. In mea veri dolor explicari, est minimum similique ut. Eu vim odio corpora contentiones. Id vim vivendo assentior voluptatum. Nec meis dolor aperiri at. Id mnesarchum consetetur nec. Quas quaeque fierent ea mea."
+                android:id="@+id/textView2"
+                android:layout_below="@+id/textView"
+                android:layout_alignStart="@+id/textView"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"
+                android:elegantTextHeight="false" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout3"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Details"
+                android:id="@+id/textView4"
+                android:textColor="#666666"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate per Hour"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 12.0"
+                android:id="@+id/textView6"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_alignEnd="@+id/frameLayout27" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#999999"
+                android:id="@+id/frameLayout27"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start &amp; End Date"
+                android:id="@+id/textView5"
+                android:layout_below="@+id/frameLayout27"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="25dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#999999"
+                android:id="@+id/frameLayout26"
+                android:layout_below="@+id/textView5"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/1/2016 - 25/1/2016"
+                android:id="@+id/textView8"
+                android:layout_above="@+id/frameLayout26"
+                android:layout_alignEnd="@+id/frameLayout26" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -59,16 +59,18 @@ public class Company_Main extends AppCompatActivity {
         //Fetching extras
         Bundle extras = getIntent().getExtras();
         if(extras != null){
-            toolBarColor = extras.getInt("COLOR");
-            toolbar.setBackgroundColor(toolBarColor);
-            if(!extras.getString("EMAIL").isEmpty()){
+            if(extras.getInt("COLOR") != 0) {
+                toolBarColor = extras.getInt("COLOR");
+                toolbar.setBackgroundColor(toolBarColor);
+            }
+            if(extras.getString("EMAIL")!=null){
                 email = extras.getString("EMAIL");
             }
-            if(!extras.getString("NAME").isEmpty()){
+            if(extras.getString("NAME")!=null){
                 name = extras.getString("NAME");
             }
-            if(!extras.getString("CVR").isEmpty()){
-                CVR = extras.getString("CPR");
+            if(extras.getString("CVR")!=null){
+                CVR = extras.getString("CVR");
             }
         }
 
@@ -85,6 +87,8 @@ public class Company_Main extends AppCompatActivity {
             textE.setText(email);
             img.setImageResource(R.drawable.ic_account_circle_white_48dp);
         }
+
+
 
 
         //Default fragment
