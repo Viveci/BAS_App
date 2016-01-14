@@ -203,6 +203,11 @@ public class Student_Main extends AppCompatActivity {
 
         public void onPause() {
             super.onPause();
+        }
+
+        public void onBackPressed(){
+            super.onBackPressed();
             overridePendingTransition(R.anim.move_destroy_left, R.anim.move_destroy_right);
         }
+
 }

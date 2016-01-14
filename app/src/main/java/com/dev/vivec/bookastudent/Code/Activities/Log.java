@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -28,34 +29,30 @@ public class Log extends AppCompatActivity {
             setContentView(R.layout.activity_log);
             log = (Button) findViewById(R.id.log_log);
             email = (EditText) findViewById(R.id.log_input_email);
+            this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+                log.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getApplicationContext(), "Logging in...",
+                                Toast.LENGTH_SHORT).show();
 
-            log.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), "Logging in...",
-                            Toast.LENGTH_SHORT).show();
+                        Intent i = null;
 
-                    Intent i = null;
+                        if (email.getText().toString().equals("com")) {
+                            i = new Intent(Log.this, Company_Main.class);
+                            i.putExtra("COLOR", getResources().getColor(R.color.bcg_blue_norm));
+                        } else if (email.getText().toString().equals("admin")) {
+                            i = new Intent(Log.this, Admin_Main.class);
+                            i.putExtra("COLOR", getResources().getColor(R.color.admin));
+                        } else {
+                            i = new Intent(Log.this, Student_Main.class);
+                        }
 
-                    if(email.getText().toString().equals("com")){
-                        i = new Intent(Log.this,Company_Main.class);
-                        i.putExtra("COLOR",getResources().getColor(R.color.bcg_blue_norm));
+                        startActivity(i);
+                        overridePendingTransition(R.anim.move_right, R.anim.move_left);
                     }
-
-                    else if(email.getText().toString().equals("admin")){
-                        i = new Intent(Log.this,Admin_Main.class);
-                        i.putExtra("COLOR",getResources().getColor(R.color.admin));
-                    }
-
-                    else{
-                        i = new Intent(Log.this,Student_Main.class);
-                    }
-
-                    startActivity(i);
-                    overridePendingTransition(R.anim.move_right, R.anim.move_left);
-                }
-            });
+                });
 
         }
 

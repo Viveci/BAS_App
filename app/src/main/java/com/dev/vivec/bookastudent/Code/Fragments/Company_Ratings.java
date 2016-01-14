@@ -98,20 +98,6 @@ public class Company_Ratings extends Fragment {
         adapter = new StudentRatingListAdatper(getActivity().getApplicationContext(),ratings);
         list.setAdapter(adapter);
 
-        list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity().getApplicationContext(), position, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(getActivity(), JobView.class);
-                startActivity(i);
-                getActivity().overridePendingTransition(R.anim.move_right, R.anim.move_left);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
         return x;
     }

@@ -39,6 +39,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Email"
         android:id="@+id/log_text_user"
+
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/log_logo"
         android:layout_alignLeft="@+id/log_logo" />

@@ -90,37 +90,30 @@ public class FindJobs extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View v) {
                 String input = search.getText().toString();
-                if(!input.isEmpty()){
-                ArrayList<CompanyItem> nList = new ArrayList<CompanyItem>();
-                for(int i = 0; i < companys.size();i++){
-                    if(companys.get(i).getCompany().equalsIgnoreCase(input)){
-                        nList.add(companys.get(i));
+                if (!input.isEmpty()) {
+                    ArrayList<CompanyItem> nList = new ArrayList<CompanyItem>();
+                    for (int i = 0; i < companys.size(); i++) {
+                        if (companys.get(i).getCompany().equalsIgnoreCase(input)) {
+                            nList.add(companys.get(i));
+                        }
                     }
-                }
-                CompListAdapter nAdapter = new CompListAdapter(mc,nList);
+                    CompListAdapter nAdapter = new CompListAdapter(mc, nList);
 
-                list.setAdapter(nAdapter);
-                }
-                else{
-                    CompListAdapter adapter = new CompListAdapter(mc,companys);
+                    list.setAdapter(nAdapter);
+                } else {
+                    CompListAdapter adapter = new CompListAdapter(mc, companys);
 
                     list.setAdapter(adapter);
                 }
             }
         });
 
-        list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(),position,Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(getActivity().getApplicationContext(), JobView.class);
-                startActivity(i);
-                getActivity().overridePendingTransition(R.anim.move_right, R.anim.move_left);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
+                getActivity().startActivity(i);
+                getActivity().overridePendingTransition(R.anim.move_right,R.anim.move_left);
             }
         });
 
