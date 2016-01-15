@@ -69,9 +69,12 @@ public class Company_PostaJob extends Fragment {
 
         //Spinner
         spinner = (Spinner) x.findViewById(R.id.comp_paj_details_spiner);
+
+
+
         String[] objects = { "Payed per assignment","Hourly payment" };
         ArrayAdapter sadapter = new ArrayAdapter(
-                getActivity().getApplicationContext(),android.R.layout.simple_list_item_1 ,objects);
+                getActivity().getApplicationContext(),R.layout.spinner_layout,R.id.spinner_label,objects);
         spinner.setAdapter(sadapter);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

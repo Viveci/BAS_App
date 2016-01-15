@@ -2,12 +2,15 @@ package com.dev.vivec.bookastudent.Code.Activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.dev.vivec.bookastudent.R;
@@ -17,12 +20,15 @@ import com.dev.vivec.bookastudent.R;
  */
 public class JobView extends AppCompatActivity {
 
-    private Toolbar toolbar;
+    private ImageView header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job);
+
+        header = (ImageView) findViewById(R.id.job_header_img);
+
     }
 
     public void onBackPressed(){
