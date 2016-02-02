@@ -6,7 +6,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -167,8 +166,6 @@ public class Student_Main extends AppCompatActivity {
 
                     }
 
-                    
-
                 }
             });
 
@@ -197,6 +194,7 @@ public class Student_Main extends AppCompatActivity {
             actionBarDrawerToggle.syncState();
 
 
+
         }
 
         @Override
@@ -212,5 +210,7 @@ public class Student_Main extends AppCompatActivity {
             super.onBackPressed();
             overridePendingTransition(R.anim.move_destroy_left, R.anim.move_destroy_right);
         }
+
+
 
 }

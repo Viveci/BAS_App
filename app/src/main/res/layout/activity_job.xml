@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Book a Student"
+                android:text="Creative Media Lab"
                 android:id="@+id/job_comp_name"
                 android:layout_alignTop="@+id/job_logo"
                 android:layout_marginLeft="10dp"
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Temporary Job Agency "
+                android:text="Media "
                 android:id="@+id/job_comp_desc"
                 android:layout_alignBottom="@+id/job_logo"
                 android:layout_alignStart="@+id/job_comp_name"
@@ -69,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Inside Sales Representative"
+                android:text="Graphic Designer"
                 android:id="@+id/job_job"
                 android:layout_alignStart="@+id/job_logo"
                 android:layout_alignEnd="@+id/job_comp_desc"
@@ -142,13 +142,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum dolor sit amet, labores splendide constituam ut mea, harum civibus et nam, no ius soleat adipisci. Eu nam stet nibh populo, usu probatus splendide ut. Cum in praesent reprehendunt. Placerat interesset signiferumque his te, ei nisl viris percipitur pri. Cu noster efficiendi appellantur vis. Id usu altera eleifend.  Modus debet laoreet pri ex, te est omnium referrentur. In mea veri dolor explicari, est minimum similique ut. Eu vim o"
+                android:text="Do you enjoy working in a creative environment? Are you good with computer graphics? Do you enjoy designing minimal and user friendly content? Are you good friends with the Adobe Creative Cloud package? "
                 android:id="@+id/job_about_about"
                 android:layout_below="@+id/job_about_label"
                 android:layout_alignStart="@+id/job_about_label"
                 android:layout_marginTop="15dp"
                 android:layout_alignParentEnd="true"
-                android:elegantTextHeight="false" />
+                android:elegantTextHeight="false"
+                android:singleLine="false" />
 
 
         </RelativeLayout>
@@ -208,9 +209,9 @@
                 android:layout_height="wrap_content"
                 android:text="Start &amp; End Date"
                 android:id="@+id/job_detail_date_label"
-                android:layout_below="@+id/frameLayout27"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="25dp" />
+                android:layout_below="@+id/frameLayout25"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -218,7 +219,7 @@
                 android:background="#999999"
                 android:id="@+id/frameLayout26"
                 android:layout_below="@+id/job_detail_date_label"
-                android:layout_alignParentLeft="true" />
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -227,6 +228,31 @@
                 android:id="@+id/job_detail_date"
                 android:layout_above="@+id/frameLayout26"
                 android:layout_alignEnd="@+id/frameLayout26" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Working hours"
+                android:id="@+id/job_detail_workinghours"
+                android:layout_below="@+id/frameLayout27"
+                android:layout_alignStart="@+id/frameLayout27"
+                android:layout_marginTop="20dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#999999"
+                android:id="@+id/frameLayout25"
+                android:layout_below="@+id/job_detail_workinghours"
+                android:layout_alignLeft="@+id/frameLayout27" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 8:00 AM - 15:00 PM"
+                android:id="@+id/job_detail_workinghours_hours"
+                android:layout_above="@+id/frameLayout25"
+                android:layout_alignParentEnd="true" />
         </RelativeLayout>
 
     </RelativeLayout>

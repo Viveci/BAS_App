@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
         import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -76,25 +78,13 @@ public class Home extends android.support.v4.app.Fragment{
         skills = (ListView) rootView.findViewById(R.id.profile_skillskeys_list);
 
         ArrayList<SkillsKeys> skillslist = new ArrayList<>();
-        skillslist.add(new SkillsKeys("Programing"));
-        skillslist.add(new SkillsKeys("Video editing"));
-        skillslist.add(new SkillsKeys("Sound editing"));
-        skillslist.add(new SkillsKeys("Book a student"));
-        skillslist.add(new SkillsKeys("Programing"));
         skillslist.add(new SkillsKeys("Video editing"));
         skillslist.add(new SkillsKeys("Sound editing"));
         skillslist.add(new SkillsKeys("Book a student"));
 
         SkillsListAdapter adapter = new SkillsListAdapter(getActivity().getApplicationContext(),skillslist);
         skills.setAdapter(adapter);
-        skills.setOnTouchListener(new View.OnTouchListener() {
-            // Setting on Touch Listener for handling the touch inside ScrollView
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.getParent().requestDisallowInterceptTouchEvent(true);
-                return false;
-            }
-        });
+        setListViewHeightBasedOnChildren(skills);
 
         edu = (ListView) rootView.findViewById(R.id.profile_edu_list);
 
@@ -102,20 +92,11 @@ public class Home extends android.support.v4.app.Fragment{
         eduList.add(new Education("Via"));
         eduList.add(new Education("Bme"));
         eduList.add(new Education("DTK"));
-        eduList.add(new Education("Via"));
-        eduList.add(new Education("Bme"));
-        eduList.add(new Education("DTK"));
 
         EducationListAdapter eduAdapter = new EducationListAdapter((getActivity().getApplicationContext()),eduList);
         edu.setAdapter(eduAdapter);
-        edu.setOnTouchListener(new View.OnTouchListener() {
-            // Setting on Touch Listener for handling the touch inside ScrollView
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.getParent().requestDisallowInterceptTouchEvent(true);
-                return false;
-            }
-        });
+        setListViewHeightBasedOnChildren(edu);
+
 
         return rootView;
     }
@@ -126,5 +107,26 @@ public class Home extends android.support.v4.app.Fragment{
 
     public void onResume(){
         super.onResume();
+    }
+
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null)
+            return;
+
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.UNSPECIFIED);
+        int totalHeight = 0;
+        View view = null;
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            view = listAdapter.getView(i, view, listView);
+            if (i == 0)
+                view.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, AbsoluteLayout.LayoutParams.WRAP_CONTENT));
+
+            view.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += view.getMeasuredHeight();
+        }
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
     }
 }
