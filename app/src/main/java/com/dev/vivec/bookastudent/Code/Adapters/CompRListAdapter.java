@@ -63,6 +63,9 @@ public class CompRListAdapter extends RecyclerView.Adapter<CompRListAdapter.JobV
         holder.JobTitle.setText(list.get(position).getCompany());
         holder.JobDesc.setText(list.get(position).getDesc());
         holder.JobPosition.setText(list.get(position).getType());
+        holder.JobLocation.setText(list.get(position).getLocation());
+        holder.JobDeadLine.setText(list.get(position).getDeadline());
+        holder.JobType.setText(list.get(position).getPaymentType());
         holder.Logo.setImageResource(list.get(position).getIcon());
     }
 
