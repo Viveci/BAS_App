@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:id="@+id/cv"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="JobTitle"
+            android:id="@+id/list_r_comp_title"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/bcg"
+            android:layout_toStartOf="@+id/list_r_comp_image"
+            android:layout_marginRight="5dp"
+            android:textSize="22dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Location:"
+            android:id="@+id/list_r_comp_location_label"
+            android:textStyle="italic"
+            android:textColor="#777777"
+            android:textSize="12dp"
+            android:layout_below="@+id/list_r_comp_position"
+            android:layout_alignStart="@+id/list_r_comp_position" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:text="description"
+            android:id="@+id/list_r_comp_desc"
+            android:layout_below="@+id/list_r_comp_location_label"
+            android:layout_alignStart="@+id/list_r_comp_location_label"
+            android:layout_alignEnd="@+id/list_r_comp_image"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:lines="5"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:id="@+id/list_r_comp_image"
+            android:layout_alignTop="@+id/list_r_comp_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/face" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@+id/list_r_comp_desc"
+            android:layout_centerHorizontal="true"
+            android:background="@color/bcg_blue_norm">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start date:"
+                android:id="@+id/list_r_comp_start_label"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Application deadline:"
+                android:id="@+id/list_r_comp_application_label"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assignment/Hourly"
+                android:id="@+id/list_r_comp_type"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/01/2016"
+                android:id="@+id/list_r_comp_start"
+                android:layout_marginRight="10dp"
+                android:textColor="#FFFFFF"
+                android:layout_alignTop="@+id/list_r_comp_start_label"
+                android:layout_toEndOf="@+id/list_r_comp_start_label"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/01/2016"
+                android:id="@+id/list_r_comp_application"
+                android:layout_marginRight="10dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="5dp"
+                android:layout_alignTop="@+id/list_r_comp_application_label"
+                android:layout_toEndOf="@+id/list_r_comp_application_label" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000 DKK"
+                android:id="@+id/list_r_comp_ammount"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="5dp"
+                android:layout_alignTop="@+id/list_r_comp_start"
+                android:layout_alignEnd="@+id/list_r_comp_type" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="somewhere"
+            android:id="@+id/list_r_comp_location"
+            android:textStyle="italic"
+            android:textColor="#333333"
+            android:layout_marginLeft="5dp"
+            android:layout_alignTop="@+id/list_r_comp_location_label"
+            android:layout_alignEnd="@+id/list_r_comp_title"
+            android:layout_toEndOf="@+id/list_r_comp_location_label"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="jobtitle"
+            android:id="@+id/list_r_comp_position"
+            android:layout_below="@+id/list_r_comp_title"
+            android:layout_alignStart="@+id/list_r_comp_title"
+            android:layout_alignEnd="@+id/list_r_comp_title"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

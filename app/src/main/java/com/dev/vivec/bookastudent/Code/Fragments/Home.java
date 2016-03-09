@@ -12,9 +12,11 @@ import android.view.MotionEvent;
 import android.view.View;
         import android.view.ViewGroup;
 import android.widget.AbsoluteLayout;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,8 +26,10 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.dev.vivec.bookastudent.Code.Adapters.EducationListAdapter;
+import com.dev.vivec.bookastudent.Code.Adapters.LanguageListAdapter;
 import com.dev.vivec.bookastudent.Code.Adapters.SkillsListAdapter;
 import com.dev.vivec.bookastudent.Code.Model.Education;
+import com.dev.vivec.bookastudent.Code.Model.Language;
 import com.dev.vivec.bookastudent.Code.Model.SkillsKeys;
 import com.dev.vivec.bookastudent.R;
 
@@ -38,6 +42,7 @@ public class Home extends android.support.v4.app.Fragment{
 
     private Toolbar toolbar;
     private ListView skills;
+    private ListView languages;
     private ListView edu;
     private TextView name;
 
@@ -88,15 +93,31 @@ public class Home extends android.support.v4.app.Fragment{
 
         edu = (ListView) rootView.findViewById(R.id.profile_edu_list);
 
-        ArrayList<Education> eduList = new ArrayList<>();
+        final ArrayList<Education> eduList = new ArrayList<>();
         eduList.add(new Education("Via"));
         eduList.add(new Education("Bme"));
         eduList.add(new Education("DTK"));
 
         EducationListAdapter eduAdapter = new EducationListAdapter((getActivity().getApplicationContext()),eduList);
         edu.setAdapter(eduAdapter);
+        edu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity().getApplicationContext(), eduList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
+            }
+        });
         setListViewHeightBasedOnChildren(edu);
 
+        languages = (ListView) rootView.findViewById(R.id.profile_language_list);
+
+        ArrayList<Language> langList = new ArrayList<>();
+        langList.add(new Language("Hungarian","Proficient"));
+        langList.add(new Language("English","Proficient"));
+        langList.add(new Language("German","Noob"));
+
+        LanguageListAdapter langAdapter = new LanguageListAdapter(getActivity().getApplicationContext(),langList);
+        languages.setAdapter(langAdapter);
+        setListViewHeightBasedOnChildren(languages);
 
         return rootView;
     }

@@ -61,39 +61,8 @@
                 android:background="#AAAAAA"
                 android:layout_marginRight="10dp"
                 android:layout_below="@+id/profile_userName"
-                android:layout_alignStart="@+id/profile_userName"></FrameLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="CPR number"
-                android:id="@+id/profile_cpr"
-                android:layout_below="@+id/profile_userName"
                 android:layout_alignStart="@+id/profile_userName"
-                android:layout_marginTop="15dp"
-                android:textColor="#555555" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="122345-5678"
-                android:id="@+id/profile_user_Cpr"
-                android:layout_below="@+id/profile_cpr"
-                android:layout_alignStart="@+id/profile_cpr"
-                android:layout_alignEnd="@+id/profile_div1"
-                android:textColor="#333333" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:id="@+id/frameLayout"
-                android:background="#AAAAAA"
-                android:layout_marginRight="10dp"
-                android:layout_below="@+id/profile_user_Cpr"
-                android:layout_alignStart="@+id/profile_user_Cpr"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"></FrameLayout>
 
 
         </RelativeLayout>
@@ -101,184 +70,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_generalbox"
-            android:layout_alignStart="@+id/profile_generalbox"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/profile_adressbox"
-            android:background="#FFFFFF"
-            android:padding="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Address"
-                android:id="@+id/profile_Adress_box_title"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:textColor="#000000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Hestedamsgade 12. 2. sal"
-                android:id="@+id/profile_user_address"
-                android:layout_below="@+id/profile_address_label"
-                android:layout_alignStart="@+id/profile_address_label"
-                android:layout_alignParentEnd="true"
-                android:textColor="#333333" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Address"
-                android:id="@+id/profile_address_label"
-                android:layout_below="@+id/profile_Adress_box_title"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="15dp"
-                android:textColor="#555555" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:id="@+id/frameLayout2"
-                android:background="#AAAAAA"
-                android:layout_marginRight="10dp"
-                android:layout_below="@+id/profile_user_address"
-                android:layout_alignStart="@+id/profile_user_address" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="ZIP code"
-                android:id="@+id/profile_address_zip"
-                android:layout_below="@+id/profile_user_address"
-                android:layout_alignStart="@+id/profile_user_address"
-                android:layout_marginTop="15dp"
-                android:textColor="#555555" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="8700"
-                android:id="@+id/profile_user_zipcode"
-                android:layout_below="@+id/profile_address_zip"
-                android:layout_alignStart="@+id/profile_address_zip"
-                android:textColor="#333333" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:id="@+id/frameLayout3"
-                android:background="#AAAAAA"
-                android:layout_marginRight="10dp"
-                android:layout_below="@+id/profile_user_zipcode"
-                android:layout_alignStart="@+id/profile_user_zipcode" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="City"
-                android:id="@+id/profile_adress_city_text"
-                android:layout_below="@+id/frameLayout3"
-                android:layout_alignStart="@+id/frameLayout3"
-                android:layout_marginTop="15dp"
-                android:textColor="#555555" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Horsens"
-                android:id="@+id/profile_user_Address"
-                android:layout_below="@+id/profile_adress_city_text"
-                android:layout_alignStart="@+id/profile_adress_city_text"
-                android:textColor="#333333" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:id="@+id/frameLayout4"
-                android:background="#AAAAAA"
-                android:layout_marginRight="10dp"
-                android:layout_below="@+id/profile_user_Address"
-                android:layout_alignParentStart="true" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_adressbox"
-            android:layout_alignStart="@+id/profile_adressbox"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#FFFFFF"
-            android:padding="10dp"
-            android:id="@+id/profile_AboutMeBox">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="About me"
-                android:id="@+id/profile_AboutMeBox_box"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:textColor="#000000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="About"
-                android:id="@+id/profile_About_text"
-                android:textColor="#555555"
-                android:layout_below="@+id/profile_AboutMeBox_box"
-                android:layout_alignStart="@+id/profile_AboutMeBox_box"
-                android:layout_marginTop="15dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Lorem ipsum dolor sit amet, ius id iudicabit liberavisse, has at laboramus intellegat. Et mel vivendo accusata philosophia, primis dicunt ea nec. Nulla mnesarchum qui ad. Velit assueverit inciderint vix ad, pri invenire delicata salutandi ne. Et affert legere mei, habeo malorum eu vel, et pro summo prodesset."
-                android:id="@+id/profile_userabout"
-                android:layout_below="@+id/profile_About_text"
-                android:layout_alignStart="@+id/profile_About_text"
-                android:textColor="#333333"
-                android:paddingBottom="5dp" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:id="@+id/frameLayout5"
-                android:background="#AAAAAA"
-                android:layout_marginRight="10dp"
-                android:layout_below="@+id/profile_userabout"
-                android:layout_alignStart="@+id/profile_userabout" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_alignParentStart="true"
-            android:layout_alignLeft="@+id/profile_AboutMeBox"
-            android:layout_alignRight="@+id/profile_AboutMeBox"
-            android:layout_below="@+id/profile_AboutMeBox"
             android:id="@+id/profile_edu"
             android:background="#FFFFFF"
-            android:layout_alignParentLeft="false"
-            android:layout_alignParentRight="false"
             android:layout_marginLeft="10dp"
             android:padding="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/profile_carboxes"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="300dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -296,7 +95,7 @@
                 android:id="@+id/profile_edu_list"
                 android:layout_below="@+id/profile_Edu_Label"
                 android:layout_alignStart="@+id/profile_Edu_Label"
-                android:layout_marginTop="10dp" />
+                android:choiceMode="singleChoice" />
 
         </RelativeLayout>
 
@@ -305,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:background="#FFFFFF"
-            android:layout_below="@+id/profile_edu"
+            android:layout_below="@+id/profile_aboutme_box"
             android:layout_alignStart="@+id/profile_edu"
             android:padding="10dp"
             android:id="@+id/profile_skillskeys_box"
@@ -319,7 +118,7 @@
                 android:id="@+id/profile_skillskeys_text"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
-                android:textColor="#000000" />
+                android:textColor="@color/bcg" />
 
             <ListView
                 android:layout_width="wrap_content"
@@ -350,7 +149,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Travelling details"
                 android:id="@+id/profile_car_label"
-                android:textColor="#000000"
+                android:textColor="@color/bcg"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true" />
 
@@ -386,6 +185,91 @@
                 android:layout_alignStart="@+id/profile_car_car"
                 android:layout_alignEnd="@+id/profile_car_car"
                 android:buttonTint="@color/bcg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:id="@+id/profile_aboutme_box"
+            android:layout_below="@+id/profile_generalbox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="About me"
+                android:id="@+id/aboutme_label"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/bcg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="About"
+                android:id="@+id/aboutme_small_label"
+                android:textColor="#555555"
+                android:layout_below="@+id/aboutme_label"
+                android:layout_alignStart="@+id/aboutme_label"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Lorem ipsum dolor sit amet, ius id iudicabit liberavisse, has at laboramus intellegat. Et mel vivendo accusata philosophia, primis dicunt ea nec. Nulla mnesarchum qui ad. Velit assueverit inciderint vix ad, pri invenire delicata salutandi ne. Et affert legere mei, habeo malorum eu vel, et pro summo prodesset."
+                android:id="@+id/aboutme_text"
+                android:layout_below="@+id/aboutme_small_label"
+                android:layout_alignStart="@+id/aboutme_small_label"
+                android:textColor="#333333"
+                android:paddingBottom="5dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/frameLayout"
+                android:background="#AAAAAA"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/aboutme_text"
+                android:layout_alignStart="@+id/aboutme_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_carboxes"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:id="@+id/profile_language_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Languages"
+                android:id="@+id/profile_language_label"
+                android:textColor="@color/bcg"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:id="@+id/profile_language_list"
+                android:choiceMode="singleChoice"
+                android:layout_below="@+id/profile_language_label"
+                android:layout_alignStart="@+id/profile_language_label"
+                android:layout_marginTop="10dp" />
         </RelativeLayout>
 
     </RelativeLayout>

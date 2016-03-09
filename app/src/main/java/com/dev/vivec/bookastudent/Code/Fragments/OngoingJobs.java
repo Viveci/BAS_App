@@ -1,17 +1,16 @@
 package com.dev.vivec.bookastudent.Code.Fragments;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.dev.vivec.bookastudent.Code.Adapters.CompListAdapter;
+import com.dev.vivec.bookastudent.Code.Adapters.CompRListAdapter;
 import com.dev.vivec.bookastudent.Code.Model.CompanyItem;
 import com.dev.vivec.bookastudent.R;
 
@@ -22,14 +21,13 @@ import java.util.ArrayList;
  */
 public class OngoingJobs extends Fragment {
 
-    private CompanyItem sony;
-    private CompanyItem dell;
-    private CompanyItem apple;
-    private CompanyItem google;
-
+    private CompanyItem marlane;
+    private CompanyItem Magic;
+    private CompanyItem Arizone;
+    private CompanyItem Creative;
     private ArrayList<CompanyItem> companys;
-    private CompListAdapter adapter;
-    private ListView list;
+
+    private RecyclerView rv;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,33 +40,37 @@ public class OngoingJobs extends Fragment {
         // Inflate the layout for this fragment
         View x = inflater.inflate(R.layout.fragment_ongoing, container, false);
 
-        sony = new CompanyItem("Sony", "Web dev", "Lorem ipsum dolor sit amet, ius id iudicabit" +
-                " liberavisse, has at laboramus intellegat.", R.drawable.sony,"2015/01/01");
+        marlane = new CompanyItem("Marlene’s clothing", "Advertising management internship",
+                "Promotional activities on social media channels with development of SEO", R.drawable.face,"2015/01/01");
 
-        dell = new CompanyItem("Dell","Product designer","MagicKapr used fly",R.drawable.dell,"2015/01/01");
-        apple = new CompanyItem("Apple","Layout designer","Graves can't have a f#&@ cigar",R.drawable.apple,"2015/01/01");
-        google = new CompanyItem("Google","Android Material Design Inventor","Nonsense nonsense",R.drawable.google,"2015/01/01");
+        Magic = new CompanyItem("3D Magic","Graphics designer","Graphic design work for promotional materials.",R.drawable.face,"2015/01/01");
+        Arizone = new CompanyItem("Arizon Packages","Process engineer",
+                "Assistant for the operation of production line and solving process problems for quality assurance.",R.drawable.face,"2015/01/01");
+        Creative = new CompanyItem("Creative Media Lab","Android developer","Do you enjoy working in a creative environment? Are you good with computer graphics? Do you enjoy designing minimal and user friendly content? Are you good friends with the Adobe Creative Cloud package?",R.drawable.creative,"2015/01/01");
 
         companys = new ArrayList<CompanyItem>();
 
-        companys.add(sony);
-        companys.add(dell);
-        companys.add(apple);
-        companys.add(google);
-        companys.add(sony);
-        companys.add(google);
-        companys.add(sony);
-        companys.add(dell);
-        companys.add(apple);
-        companys.add(google);
-        companys.add(sony);
-        companys.add(google);
+        companys.add(marlane);
+        companys.add(Creative);
+        companys.add(Magic);
+        companys.add(Arizone);
+        companys.add(marlane);
+        companys.add(marlane);
+        companys.add(Magic);
+        companys.add(Arizone);
+        companys.add(Creative);
+        companys.add(marlane);
+        companys.add(Creative);
 
-        list = (ListView) x.findViewById(R.id.ongoing_list);
+        //Recycle view
+        rv = (RecyclerView)x.findViewById(R.id.rv);
+        rv.setHasFixedSize(true);
 
-        adapter = new CompListAdapter(this.getActivity().getApplicationContext(),companys);
+        LinearLayoutManager llm = new LinearLayoutManager(this.getActivity().getApplicationContext());
+        rv.setLayoutManager(llm);
 
-        list.setAdapter(adapter);
+        CompRListAdapter adapter = new CompRListAdapter(companys);
+        rv.setAdapter(adapter);
 
         return x;
     }

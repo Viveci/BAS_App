@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -116,6 +117,8 @@ public class FindJobs extends android.support.v4.app.Fragment {
                 getActivity().overridePendingTransition(R.anim.move_right,R.anim.move_left);
             }
         });
+
+
 
         return rootView;
     }
