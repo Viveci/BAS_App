@@ -5,9 +5,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.dev.vivec.bookastudent.Code.Adapters.CompListAdapter;
 import com.dev.vivec.bookastudent.Code.Adapters.CompRListAdapter;
@@ -41,9 +43,9 @@ public class OngoingJobs extends Fragment {
         View x = inflater.inflate(R.layout.fragment_ongoing, container, false);
 
         marlane = new CompanyItem("Marlene’s clothing", "Advertising management internship",
-                "Promotional activities on social media channels with development of SEO", R.drawable.face,"2016/04/01","2016/03/15","Horsens","Hourly");
+                "Promotional activities on social media channels with development of SEO", R.drawable.threed,"2016/04/01","2016/03/15","Horsens","Hourly");
 
-        Magic = new CompanyItem("3D Magic","Graphics designer","Graphic design work for promotional materials.",R.drawable.face,"2016/03/10","2016/04/10","Copenhagen","per assignment");
+        Magic = new CompanyItem("3D Magic","Graphics designer","Graphic design work for promotional materials.",R.drawable.threed,"2016/03/10","2016/04/10","Copenhagen","per assignment");
         Arizone = new CompanyItem("Arizon Packages","Process engineer",
                 "Assistant for the operation of production line and solving process problems for quality assurance.",R.drawable.face,"2015/03/20","2016/04/20","Aalborg","Hourly");
         Creative = new CompanyItem("Creative Media Lab","Android developer","Do you enjoy working in a creative environment? Are you good with computer graphics? Do you enjoy designing minimal and user friendly content? Are you good friends with the Adobe Creative Cloud package?",
@@ -51,7 +53,6 @@ public class OngoingJobs extends Fragment {
 
         companys = new ArrayList<CompanyItem>();
 
-        companys.add(marlane);
         companys.add(Creative);
         companys.add(Magic);
         companys.add(Arizone);
@@ -72,6 +73,7 @@ public class OngoingJobs extends Fragment {
 
         CompRListAdapter adapter = new CompRListAdapter(companys);
         rv.setAdapter(adapter);
+
 
         return x;
     }
