@@ -65,11 +65,14 @@
     <string name="admin_db">Database</string>
     <string name="admin_notifications">Notifications</string>
     <string name="admin_settings">Settings</string>
+    <string name="job_description">Do you enjoy working in a creative environment?\nAre you good in Android development?\n\n If the answer to these questions is YES, then this might be the job for you!</string>
+    <string name="log_in">Logging in...</string>
 
     <string-array name="payment">
         <item>Pay per assignment</item>
         <item>Hourly payment</item>
     </string-array>
+
 
 
 

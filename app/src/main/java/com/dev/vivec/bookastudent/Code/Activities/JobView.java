@@ -33,9 +33,7 @@ public class JobView extends AppCompatActivity {
         header = (ImageView) findViewById(R.id.job_header_img);
         JobAbout = (TextView) findViewById(R.id.job_about_about);
 
-        String htmls = "<p>Do you enjoy working in a creative environment?</p><p>Are you good in Android development?<p>"+
-                        "<p>If the answer to these questions is YES, then this might be the job for you! </p>";
-        JobAbout.setText(Html.fromHtml(htmls));
+        JobAbout.setText(R.string.job_description);
 
 
     }

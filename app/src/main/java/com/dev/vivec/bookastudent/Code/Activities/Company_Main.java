@@ -37,6 +37,7 @@ public class Company_Main extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    private MenuItem lastItem;
 
     private String name;
     private String email;
@@ -102,10 +103,15 @@ public class Company_Main extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
+                if(lastItem == null)
+                    lastItem = menuItem;
+                if(lastItem!=menuItem){
+                    lastItem.setChecked(false);
+                    lastItem = menuItem;
+                }
 
                 //Checking if the item is in checked state or not, if not make it in checked state
-                if (menuItem.isChecked()) menuItem.setChecked(false);
-                else menuItem.setChecked(true);
+                if (!menuItem.isChecked()) menuItem.setChecked(true);
 
                 //Closing drawer on item click
                 drawerLayout.closeDrawers();

@@ -1,8 +1,6 @@
 package com.dev.vivec.bookastudent.Code.Activities;
 
-/**
- * Created by user on 12/30/2015.
- */
+
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -24,7 +22,7 @@ import com.dev.vivec.bookastudent.Code.Fragments.Home;
 import com.dev.vivec.bookastudent.R;
 
 /**
- * Created by Teperics Márton on 2015.12.30..
+ * Created by Teperics Márton on 2015.12.30.
  */
 
 public class Admin_Main extends AppCompatActivity {

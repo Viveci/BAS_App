@@ -2,6 +2,7 @@ package com.dev.vivec.bookastudent.Code.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,6 @@ import com.dev.vivec.bookastudent.R;
  */
 public class Company_Settings extends Fragment {
 
-    public Company_Settings(){};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,8 @@ public class Company_Settings extends Fragment {
                              Bundle savedInstanceState) {
         View x = inflater.inflate(R.layout.fragment_company_settings, container, false);
 
+        Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+        toolbar.setTitle("Settings");
         //Do stuff here
 
         return x;

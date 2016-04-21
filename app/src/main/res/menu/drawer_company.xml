@@ -1,52 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-
+    <group android:id="@+id/main_actions">
         <item
             android:id="@+id/CHome"
             android:checked="false"
             android:icon="@drawable/ic_home_black"
-            android:title="@string/comp_home" />
+            android:title="@string/comp_home"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/CJobs"
             android:checked="false"
             android:icon="@drawable/ic_jobs"
-            android:title="@string/comp_Jobs" />
+            android:title="@string/comp_Jobs"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/CPost"
             android:checked="false"
             android:icon="@drawable/ic_myjobs_black"
-            android:title="@string/comp_post" />
+            android:title="@string/comp_post"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/CRatings"
             android:checked="false"
             android:icon="@drawable/ic_star_full"
-            android:title="@string/comp_Ratings" />
+            android:title="@string/comp_Ratings"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/CNotifications"
             android:checked="false"
             android:icon="@drawable/ic_notifications_black"
-            android:title="@string/Notifications" />
+            android:title="@string/Notifications"
+            android:checkable="true" />
 
-        <item
-            android:enabled="false"/>
-
+        </group>
+        <group android:id="@+id/other_actions">
         <item
             android:id="@+id/Csettings"
             android:checked="false"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:title="@string/Settings" />
+            android:title="@string/Settings"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/contact"
             android:checked="false"
             android:icon="@drawable/ic_info_black_24dp"
-            android:title="@string/contact" />
-
-    </group>
+            android:title="@string/contact"
+            android:checkable="true"/>
+        </group>
 </menu>

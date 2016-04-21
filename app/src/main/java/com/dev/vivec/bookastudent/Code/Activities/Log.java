@@ -34,7 +34,7 @@ public class Log extends AppCompatActivity {
                 log.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(), "Logging in...",
+                        Toast.makeText(getApplicationContext(), R.string.log_in,
                                 Toast.LENGTH_SHORT).show();
 
                         Intent i = null;
