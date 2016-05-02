@@ -32,6 +32,7 @@ public class Admin_Main extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    private MenuItem lastItem;
     android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
     @Override
@@ -63,11 +64,16 @@ public class Admin_Main extends AppCompatActivity {
             // This method will trigger on item Click of navigation menu
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-
+                // replacing the single click behavior from the menu xml
+                if(lastItem == null)
+                    lastItem = menuItem;
+                if(lastItem!=menuItem){
+                    lastItem.setChecked(false);
+                    lastItem = menuItem;
+                }
 
                 //Checking if the item is in checked state or not, if not make it in checked state
-                if (menuItem.isChecked()) menuItem.setChecked(false);
-                else menuItem.setChecked(true);
+                if (!menuItem.isChecked()) menuItem.setChecked(true);
 
                 //Closing drawer on item click
                 drawerLayout.closeDrawers();

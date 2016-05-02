@@ -103,6 +103,7 @@ public class Company_Main extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
+                // replacing the single click behavior from the menu xml
                 if(lastItem == null)
                     lastItem = menuItem;
                 if(lastItem!=menuItem){

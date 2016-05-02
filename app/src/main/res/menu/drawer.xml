@@ -1,51 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <group android:checkableBehavior="single">
-
+    <group android:id="@+id/main">
         <item
             android:id="@+id/Home"
             android:checked="false"
             android:icon="@drawable/ic_home_black"
-            android:title="@string/Home" />
+            android:title="@string/Home"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/MyJobs"
             android:checked="false"
             android:icon="@drawable/ic_myjobs_black"
-            android:title="@string/MyJobs" />
+            android:title="@string/MyJobs"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/FindJobs"
             android:checked="false"
             android:icon="@drawable/ic_search_black"
-            android:title="@string/FindJobs" />
+            android:title="@string/FindJobs"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/Rating"
             android:checked="false"
             android:icon="@drawable/ic_star_full"
-            android:title="@string/Rating" />
+            android:title="@string/Rating"
+            android:checkable="true"/>
 
         <item
             android:id="@+id/Notifications"
             android:checked="false"
             android:icon="@drawable/ic_notifications_black"
-            android:title="@string/Notifications" />
+            android:title="@string/Notifications"
+            android:checkable="true"/>
 
-        <item
-            android:enabled="false"/>
-
+    </group>
+    <group android:id="@+id/other">
         <item
             android:id="@+id/settings"
             android:checked="false"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:title="@string/Settings" />
+            android:title="@string/Settings"
+            android:checkable="true"/>
         <item
             android:id="@+id/contact"
             android:checked="false"
             android:icon="@drawable/ic_info_black_24dp"
-            android:title="@string/contact" />
-
+            android:title="@string/contact"
+            android:checkable="true"/>
     </group>
 </menu>
